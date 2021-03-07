@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="assets/connect.svg?raw=true">
+    <img src="assets/connect.svg?raw=true" width=350>
 </p>
 
 <h1 align="center">Dime.Scheduler .NET Tool</h1>
