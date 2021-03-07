@@ -13,9 +13,11 @@ namespace Dime.Scheduler.DotNetTool
 
             await Parser
                 .Default
-                .ParseArguments<AddCategoryOptions, AddResourceLiveLocationOptions>(args)
+                .ParseArguments<AddTimeMarkerOptions, AddPinOptions, AddCategoryOptions, AddResourceLiveLocationOptions>(args)
                 .MapResult(
                     async (AddCategoryOptions opts) => await RunAddCategory(opts),
+                    async (AddPinOptions opts) => await RunAddPin(opts),
+                    async (AddTimeMarkerOptions opts) => await RunAddTimeMarker(opts),
                     async (AddResourceLiveLocationOptions opts) => await RunAddResourceLiveLocationAndReturnExitCode(opts),
                     _ => Task.FromResult(-1));
         }
@@ -23,6 +25,18 @@ namespace Dime.Scheduler.DotNetTool
         private static async Task RunAddResourceLiveLocationAndReturnExitCode(AddResourceLiveLocationOptions opts)
         {
             AddLiveResourceLocationCommand cmd = new();
+            await cmd.ProcessAsync(opts);
+        }
+
+        private static async Task RunAddPin(AddPinOptions opts)
+        {
+            AddPinCommand cmd = new();
+            await cmd.ProcessAsync(opts);
+        }
+
+        private static async Task RunAddTimeMarker(AddTimeMarkerOptions opts)
+        {
+            AddTimeMarkerCommand cmd = new();
             await cmd.ProcessAsync(opts);
         }
 

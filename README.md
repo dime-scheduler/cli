@@ -4,6 +4,8 @@
 
 <h1 align="center">Dime.Scheduler .NET Tool</h1>
 
+Connect with Dime.Scheduler through a .NET Tool.
+
 ## Installation
 
 🚧 The .NET Tool is published in Dime.Scheduler's private NuGet feed.
@@ -18,6 +20,17 @@ To clone and run this application, you'll need Visual Studio 16.7 or higher. The
 
 ## Usage
 
+The following example adds or updates a category in Dime.Scheduler:
+
+```cmd
+dimescheduler addCategory
+-u https://mydimescheduler.io
+-c myadministrator@mydimescheduler.com
+-p mystrongpassword
+-n Service order status
+-h #32a852
+```
+
 The entry point of the global tool is the `dimescheduler` command.
 
 <img src="assets/cmd.png" />
@@ -27,12 +40,13 @@ The .NET tool currently supports the following verbs:
 | Verb                    |
 | ----------------------- |
 | addCategory             |
+| addPin                  |
+| addTimeMarker           |
 | addLiveResourceLocation |
 
 To see the parameters, simply run the `dimescheduler` + `verb` + `--help` command and you'll get all the information you need:
 
 <img src="assets/cmd-command.png" />
-
 
 ## Contributing
 
