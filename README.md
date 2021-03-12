@@ -2,6 +2,13 @@
     <img src="assets/connect.svg?raw=true" width=350>
 </p>
 
+<p align="center">
+<img src="https://img.shields.io/azure-devops/build/dimenicsbe/utilities/190?style=flat-square" />
+<a href="https://codeclimate.com/github/dimenics/ds-dotnettool/maintainability"><img src="https://api.codeclimate.com/v1/badges/68140b51ba67c1fbf36e/maintainability" /></a> 
+ <a href="https://github.com/dimenics/ds-dotnettool/discussions">
+  <img src="https://img.shields.io/badge/chat-discussions-brightgreen?style=flat-square"> <img src="https://img.shields.io/badge/License-MIT-brightgreen.svg?style=flat-square"/> <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" />
+</a>
+</p>
 <h1 align="center">Dime.Scheduler .NET Tool</h1>
 
 Connect with Dime.Scheduler through a .NET Tool.
@@ -11,7 +18,10 @@ Connect with Dime.Scheduler through a .NET Tool.
 🚧 The .NET Tool is published in Dime.Scheduler's private NuGet feed.
 
 ```cmd
-dotnet tool install Dime.Scheduler.DotNetTool -g --add-source https://pkgs.dev.azure.com/dimenicsbe/_packaging/Dime.Scheduler/nuget/v3/index.json --version 0.0.1-alpha.1
+dotnet tool install Dime.Scheduler.DotNetTool 
+--global 
+--version 0.0.1-alpha.1
+--add-source https://pkgs.dev.azure.com/dimenicsbe/_packaging/Dime.Scheduler/nuget/v3/index.json 
 ```
 
 ## Prerequisites
@@ -35,16 +45,9 @@ The entry point of the global tool is the `dimescheduler` command.
 
 <img src="assets/cmd.png" />
 
-The .NET tool currently supports the following verbs:
+See the repo's wiki for a list of all commands and their parameters.
 
-| Verb                    |
-| ----------------------- |
-| addCategory             |
-| addPin                  |
-| addTimeMarker           |
-| addLiveResourceLocation |
-
-To see the parameters, simply run the `dimescheduler` + `verb` + `--help` command and you'll get all the information you need:
+To see the parameters of a command, simply run the `dimescheduler` + `verb` + `--help` command and you'll get all the information you need:
 
 <img src="assets/cmd-command.png" />
 
