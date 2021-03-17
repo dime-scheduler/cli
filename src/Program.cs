@@ -13,13 +13,20 @@ namespace Dime.Scheduler.DotNetTool
 
             await Parser
                 .Default
-                .ParseArguments<AddTimeMarkerOptions, AddPinOptions, AddCategoryOptions, AddResourceLiveLocationOptions>(args)
+                .ParseArguments<AddTimeMarkerOptions, AddPinOptions, AddCategoryOptions, AddAppointmentOptions, AddResourceLiveLocationOptions>(args)
                 .MapResult(
                     async (AddCategoryOptions opts) => await RunAddCategory(opts),
                     async (AddPinOptions opts) => await RunAddPin(opts),
                     async (AddTimeMarkerOptions opts) => await RunAddTimeMarker(opts),
+                    async (AddAppointmentOptions opts) => await RunAddAppointment(opts),
                     async (AddResourceLiveLocationOptions opts) => await RunAddResourceLiveLocationAndReturnExitCode(opts),
                     _ => Task.FromResult(-1));
+        }
+
+        private static async Task RunAddAppointment(AddAppointmentOptions opts)
+        {
+            AddAppointmentCommand cmd = new();
+            await cmd.ProcessAsync(opts);
         }
 
         private static async Task RunAddResourceLiveLocationAndReturnExitCode(AddResourceLiveLocationOptions opts)
@@ -49,12 +56,12 @@ namespace Dime.Scheduler.DotNetTool
         private static void ShowDimeScheduler()
         {
             const string txt = @"
-██████╗ ██╗███╗   ███╗███████╗   ███████╗ ██████╗██╗  ██╗███████╗██████╗ ██╗   ██╗██╗     ███████╗██████╗ 
+██████╗ ██╗███╗   ███╗███████╗   ███████╗ ██████╗██╗  ██╗███████╗██████╗ ██╗   ██╗██╗     ███████╗██████╗
 ██╔══██╗██║████╗ ████║██╔════╝   ██╔════╝██╔════╝██║  ██║██╔════╝██╔══██╗██║   ██║██║     ██╔════╝██╔══██╗
 ██║  ██║██║██╔████╔██║█████╗     ███████╗██║     ███████║█████╗  ██║  ██║██║   ██║██║     █████╗  ██████╔╝
 ██║  ██║██║██║╚██╔╝██║██╔══╝     ╚════██║██║     ██╔══██║██╔══╝  ██║  ██║██║   ██║██║     ██╔══╝  ██╔══██╗
 ██████╔╝██║██║ ╚═╝ ██║███████╗██╗███████║╚██████╗██║  ██║███████╗██████╔╝╚██████╔╝███████╗███████╗██║  ██║
-╚═════╝ ╚═╝╚═╝     ╚═╝╚══════╝╚═╝╚══════╝ ╚═════╝╚═╝  ╚═╝╚══════╝╚═════╝  ╚═════╝ ╚══════╝╚══════╝╚═╝  ╚═╝                                                                                                       
+╚═════╝ ╚═╝╚═╝     ╚═╝╚══════╝╚═╝╚══════╝ ╚═════╝╚═╝  ╚═╝╚══════╝╚═════╝  ╚═════╝ ╚══════╝╚══════╝╚═╝  ╚═╝
 ";
             Console.WriteLine(txt);
         }
