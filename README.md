@@ -20,7 +20,7 @@ Connect with Dime.Scheduler through a .NET Tool.
 ```cmd
 dotnet tool install Dime.Scheduler.DotNetTool 
 --global 
---version 0.0.1-alpha.1
+--version 0.0.1-alpha.2
 --add-source https://pkgs.dev.azure.com/dimenicsbe/_packaging/Dime.Scheduler/nuget/v3/index.json 
 ```
 
