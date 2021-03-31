@@ -5,11 +5,18 @@
     <TargetFramework>net5.0</TargetFramework>
     <PackAsTool>true</PackAsTool>
     <ToolCommandName>dimescheduler</ToolCommandName>
-    <PackageOutputPath>./nupkg</PackageOutputPath>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <NeutralLanguage>en</NeutralLanguage>
     <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PackageOutputPath>./nupkg</PackageOutputPath>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <PackageIconUrl>https://github.com/dimenics/dimenics/blob/master/assets/dimenicslogo.png?raw=true</PackageIconUrl>
+    <PackageTags>Dime;Scheduler;SDK;REST;dotnet;dotnettool</PackageTags>
+    <RepositoryUrl>https://github.com/dimenics/ds-cli</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/dimenics/ds-cli</PackageProjectUrl>
   </PropertyGroup>
   <PropertyGroup>
     <Authors>Dimenics</Authors>
@@ -17,11 +24,13 @@
     <Product>Dime.Scheduler</Product>
     <AssemblyTitle>Dime.Scheduler</AssemblyTitle>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Description>Dime.Scheduler CLI</Description>
+    <Summary>A command-line interface for Dime.Scheduler</Summary>
   </PropertyGroup>
 
   <PropertyGroup>
     <VersionPrefix>0.0.1</VersionPrefix>
-    <VersionSuffix>alpha.3</VersionSuffix>
+    <VersionSuffix>alpha.4</VersionSuffix>
     <AssemblyVersion>0.0.1.0</AssemblyVersion>
     <FileVersion>0.0.1.0</FileVersion>
   </PropertyGroup>
