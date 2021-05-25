@@ -13,7 +13,7 @@ namespace Dime.Scheduler.DotNetTool
 
             await Parser
                 .Default
-                .ParseArguments<AddTimeMarkerOptions, AddPinOptions, AddCategoryOptions, AddAppointmentOptions, AddTransientMessageOptions, AddResourceLiveLocationOptions>(args)
+                .ParseArguments<AddTimeMarkerOptions, AddPinOptions, AddCategoryOptions, AddAppointmentOptions, AddTransientMessageOptions, AddResourceLiveLocationOptions, AddContainerOptions, AddAppointmentContainerOptions>(args)
                 .MapResult(
                     async (AddCategoryOptions opts) => await RunAddCategory(opts),
                     async (AddPinOptions opts) => await RunAddPin(opts),
@@ -21,7 +21,21 @@ namespace Dime.Scheduler.DotNetTool
                     async (AddAppointmentOptions opts) => await RunAddAppointment(opts),
                     async (AddTransientMessageOptions opts) => await RunAddMessage(opts),
                     async (AddResourceLiveLocationOptions opts) => await RunAddResourceLiveLocationAndReturnExitCode(opts),
+                    async (AddContainerOptions opts) => await RunAddContainer(opts),
+                    async (AddAppointmentContainerOptions opts) => await RunAddAppointmentContainer(opts),
                     _ => Task.FromResult(-1));
+        }
+
+        private static async Task RunAddContainer(AddContainerOptions opts)
+        {
+            AddContainerCommand cmd = new();
+            await cmd.ProcessAsync(opts);
+        }
+
+        private static async Task RunAddAppointmentContainer(AddAppointmentContainerOptions opts)
+        {
+            AddAppointmentContainerCommand cmd = new();
+            await cmd.ProcessAsync(opts);
         }
 
         private static async Task RunAddMessage(AddTransientMessageOptions opts)
