@@ -16,7 +16,7 @@ Connect with Dime.Scheduler through a .NET Tool.
 ## Installation
 
 ```cmd
-dotnet tool install Dime.Scheduler.DotNetTool --global --version 0.0.1-alpha.4
+dotnet tool install Dime.Scheduler.DotNetTool --global --version 0.0.1-alpha.latest
 ```
 
 ## Prerequisites

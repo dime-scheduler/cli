@@ -12,11 +12,10 @@
     <PackageOutputPath>./nupkg</PackageOutputPath>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <IncludeSymbols>true</IncludeSymbols>
-    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-    <PackageIconUrl>https://github.com/dimenics/dimenics/blob/master/assets/dimenicslogo.png?raw=true</PackageIconUrl>
+    <PackageIconUrl>https://cdn.dimescheduler.com/dime-software/logo-shape.png</PackageIconUrl>
     <PackageTags>Dime;Scheduler;SDK;REST;dotnet;dotnettool</PackageTags>
-    <RepositoryUrl>https://github.com/dimenics/ds-cli</RepositoryUrl>
-    <PackageProjectUrl>https://github.com/dimenics/ds-cli</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/dime-scheduler/cli</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/dime-scheduler/cli</PackageProjectUrl>
   </PropertyGroup>
   <PropertyGroup>
     <Authors>Dimenics</Authors>
@@ -26,17 +25,24 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Description>Dime.Scheduler CLI</Description>
     <Summary>A command-line interface for Dime.Scheduler</Summary>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <PropertyGroup>
     <VersionPrefix>0.0.1</VersionPrefix>
-    <VersionSuffix>alpha.5</VersionSuffix>
+    <VersionSuffix>alpha.7</VersionSuffix>
     <AssemblyVersion>0.0.1.0</AssemblyVersion>
     <FileVersion>0.0.1.0</FileVersion>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="CommandLineParser" Version="2.8.0" />
-    <PackageReference Include="Dime.Scheduler.Sdk" Version="0.1.0-alpha.17" />
+    <PackageReference Include="Dime.Scheduler.Sdk" Version="0.1.0-alpha.20" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  
 </Project>
