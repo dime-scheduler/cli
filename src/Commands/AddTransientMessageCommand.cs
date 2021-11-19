@@ -2,7 +2,7 @@
 using Dime.Scheduler.Sdk;
 using Task = System.Threading.Tasks.Task;
 
-namespace Dime.Scheduler.DotNetTool.Commands
+namespace Dime.Scheduler.CLI.Commands
 {
     public class AddTransientMessageCommand : ICommand<AddTransientMessageOptions>
     {

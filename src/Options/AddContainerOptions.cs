@@ -1,7 +1,7 @@
 ﻿using System;
 using CommandLine;
 
-namespace Dime.Scheduler.DotNetTool
+namespace Dime.Scheduler.CLI
 {
     [Verb("addContainer", HelpText = "Adds a container.")]
     public class AddContainerOptions : BaseOptions

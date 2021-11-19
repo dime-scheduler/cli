@@ -1,6 +1,6 @@
 ﻿using CommandLine;
 
-namespace Dime.Scheduler.DotNetTool
+namespace Dime.Scheduler.CLI
 {
     [Verb("addLiveResourceLocation", HelpText = "Adds a live location for the resource.")]
     public class AddResourceLiveLocationOptions : BaseOptions

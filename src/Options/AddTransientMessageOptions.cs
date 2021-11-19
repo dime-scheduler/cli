@@ -1,6 +1,6 @@
 ﻿using CommandLine;
 
-namespace Dime.Scheduler.DotNetTool
+namespace Dime.Scheduler.CLI
 {
     [Verb("addTransientMessage", HelpText = "Adds a fly-in message to the online users")]
     public class AddTransientMessageOptions : BaseOptions

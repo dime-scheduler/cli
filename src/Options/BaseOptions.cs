@@ -1,6 +1,6 @@
 ﻿using CommandLine;
 
-namespace Dime.Scheduler.DotNetTool
+namespace Dime.Scheduler.CLI
 {
     public abstract class BaseOptions
     {

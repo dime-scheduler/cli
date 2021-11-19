@@ -1,7 +1,7 @@
 ﻿using System;
 using CommandLine;
 
-namespace Dime.Scheduler.DotNetTool
+namespace Dime.Scheduler.CLI
 {
     [Verb("addAppointment", HelpText = "Adds an appointment to the planning board.")]
     public class AddAppointmentOptions : BaseOptions

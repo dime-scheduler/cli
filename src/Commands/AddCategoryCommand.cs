@@ -3,7 +3,7 @@ using Dime.Scheduler.Sdk;
 using Dime.Scheduler.Sdk.Import;
 using Task = System.Threading.Tasks.Task;
 
-namespace Dime.Scheduler.DotNetTool.Commands
+namespace Dime.Scheduler.CLI.Commands
 {
     public class AddCategoryCommand : ICommand<AddCategoryOptions>
     {

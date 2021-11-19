@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Threading.Tasks;
 using CommandLine;
-using Dime.Scheduler.DotNetTool.Commands;
+using Dime.Scheduler.CLI.Commands;
 
-namespace Dime.Scheduler.DotNetTool
+namespace Dime.Scheduler.CLI
 {
     public class Program
     {
@@ -13,7 +13,7 @@ namespace Dime.Scheduler.DotNetTool
 
             await Parser
                 .Default
-                .ParseArguments<AddTimeMarkerOptions, AddPinOptions, AddCategoryOptions, AddAppointmentOptions, AddTransientMessageOptions, AddResourceLiveLocationOptions, AddContainerOptions, AddAppointmentContainerOptions>(args)
+                .ParseArguments<AddTimeMarkerOptions, AddPinOptions, AddCategoryOptions, AddAppointmentOptions, AddTransientMessageOptions, AddResourceLiveLocationOptions, AddContainerOptions, AddAppointmentContainerOptions, AddUserOptions>(args)
                 .MapResult(
                     async (AddCategoryOptions opts) => await RunAddCategory(opts),
                     async (AddPinOptions opts) => await RunAddPin(opts),
@@ -23,7 +23,14 @@ namespace Dime.Scheduler.DotNetTool
                     async (AddResourceLiveLocationOptions opts) => await RunAddResourceLiveLocationAndReturnExitCode(opts),
                     async (AddContainerOptions opts) => await RunAddContainer(opts),
                     async (AddAppointmentContainerOptions opts) => await RunAddAppointmentContainer(opts),
-                    _ => Task.FromResult(-1));
+                    async (AddUserOptions opts) => await RunAddUser(opts),
+                    _ => Task.FromResult(-1)); ;
+        }
+
+        private static async Task RunAddUser(AddUserOptions opts)
+        {
+            AddUserCommand cmd = new();
+            await cmd.ProcessAsync(opts);
         }
 
         private static async Task RunAddContainer(AddContainerOptions opts)

@@ -1,6 +1,6 @@
 ﻿using CommandLine;
 
-namespace Dime.Scheduler.DotNetTool
+namespace Dime.Scheduler.CLI
 {
     [Verb("addPin", HelpText = "Adds a pin.")]
     public class AddPinOptions : IndicatorOptions

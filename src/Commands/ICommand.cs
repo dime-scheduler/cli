@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace Dime.Scheduler.DotNetTool.Commands
+namespace Dime.Scheduler.CLI.Commands
 {
     internal interface ICommand<in TOptions>
     {
