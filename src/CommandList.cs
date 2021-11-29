@@ -18,6 +18,7 @@ namespace Dime.Scheduler.CLI
             Add(typeof(AddContainerOptions), RunCommand<AddContainerCommand, AddContainerOptions>);
             Add(typeof(AddAppointmentContainerOptions), RunCommand<AddAppointmentContainerCommand, AddAppointmentContainerOptions>);
             Add(typeof(AddUserOptions), RunCommand<AddUserCommand, AddUserOptions>);
+            Add(typeof(AddJobOptions), RunCommand<AddJobCommand, AddJobOptions>);
         }
 
         private static Task RunCommand<TCommand, TOptions>(object opts)
