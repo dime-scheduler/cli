@@ -7,16 +7,16 @@ namespace Dime.Scheduler.CLI
     [Verb("addTask", HelpText = "Adds a task.")]
     public class AddTaskOptions : BaseOptions
     {
-        [Option]
+        [Option(Required = true)]
         public string SourceApp { get; set; }
 
-        [Option]
+        [Option(Required = true)]
         public string SourceType { get; set; }
 
-        [Option]
+        [Option(Required = true)]
         public string JobNo { get; set; }
 
-        [Option]
+        [Option(Required = true)]
         public string TaskNo { get; set; }
 
         [Option]
