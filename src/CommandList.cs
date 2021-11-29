@@ -26,6 +26,7 @@ namespace Dime.Scheduler.CLI
             AddCommand<AddCaptionCommand, AddCaptionOptions>();
             AddCommand<AddResourceCommand, AddResourceOptions>();
             AddCommand<AddActionUriCommand, AddActionUriOptions>();
+            AddCommand<AddAssignmentCommand, AddAssignmentOptions>();
         }
 
         private void AddCommand<TCommand, TOptions>()
