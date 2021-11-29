@@ -21,6 +21,8 @@ namespace Dime.Scheduler.CLI
             Add(typeof(AddJobOptions), RunCommand<AddJobCommand, AddJobOptions>);
             Add(typeof(AddTaskOptions), RunCommand<AddTaskCommand, AddTaskOptions>);
             Add(typeof(AddNotificationOptions), RunCommand<AddNotificationCommand, AddNotificationOptions>);
+            Add(typeof(AddFilterGroupOptions), RunCommand<AddFilterGroupCommand, AddFilterGroupOptions>);
+            Add(typeof(AddFilterValueOptions), RunCommand<AddFilterValueCommand, AddFilterValueOptions>);
         }
 
         private static Task RunCommand<TCommand, TOptions>(object opts)
