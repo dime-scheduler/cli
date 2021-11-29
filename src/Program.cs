@@ -1,7 +1,7 @@
 ﻿using System;
+using System.Linq;
 using System.Threading.Tasks;
 using CommandLine;
-using Dime.Scheduler.CLI.Commands;
 
 namespace Dime.Scheduler.CLI
 {
@@ -13,72 +13,15 @@ namespace Dime.Scheduler.CLI
 
             await Parser
                 .Default
-                .ParseArguments<AddTimeMarkerOptions, AddPinOptions, AddCategoryOptions, AddAppointmentOptions, AddTransientMessageOptions, AddResourceLiveLocationOptions, AddContainerOptions, AddAppointmentContainerOptions, AddUserOptions>(args)
-                .MapResult(
-                    async (AddCategoryOptions opts) => await RunAddCategory(opts),
-                    async (AddPinOptions opts) => await RunAddPin(opts),
-                    async (AddTimeMarkerOptions opts) => await RunAddTimeMarker(opts),
-                    async (AddAppointmentOptions opts) => await RunAddAppointment(opts),
-                    async (AddTransientMessageOptions opts) => await RunAddMessage(opts),
-                    async (AddResourceLiveLocationOptions opts) => await RunAddResourceLiveLocationAndReturnExitCode(opts),
-                    async (AddContainerOptions opts) => await RunAddContainer(opts),
-                    async (AddAppointmentContainerOptions opts) => await RunAddAppointmentContainer(opts),
-                    async (AddUserOptions opts) => await RunAddUser(opts),
-                    _ => Task.FromResult(-1)); ;
+                .ParseArguments(args, new CommandList().Select(x => x.Key).ToArray())
+                .MapResult(async (object opt) => await Run(opt), e => Task.FromResult(1));
         }
 
-        private static async Task RunAddUser(AddUserOptions opts)
+        private static async Task Run(object obj)
         {
-            AddUserCommand cmd = new();
-            await cmd.ProcessAsync(opts);
-        }
-
-        private static async Task RunAddContainer(AddContainerOptions opts)
-        {
-            AddContainerCommand cmd = new();
-            await cmd.ProcessAsync(opts);
-        }
-
-        private static async Task RunAddAppointmentContainer(AddAppointmentContainerOptions opts)
-        {
-            AddAppointmentContainerCommand cmd = new();
-            await cmd.ProcessAsync(opts);
-        }
-
-        private static async Task RunAddMessage(AddTransientMessageOptions opts)
-        {
-            AddTransientMessageCommand cmd = new();
-            await cmd.ProcessAsync(opts);
-        }
-
-        private static async Task RunAddAppointment(AddAppointmentOptions opts)
-        {
-            AddAppointmentCommand cmd = new();
-            await cmd.ProcessAsync(opts);
-        }
-
-        private static async Task RunAddResourceLiveLocationAndReturnExitCode(AddResourceLiveLocationOptions opts)
-        {
-            AddLiveResourceLocationCommand cmd = new();
-            await cmd.ProcessAsync(opts);
-        }
-
-        private static async Task RunAddPin(AddPinOptions opts)
-        {
-            AddPinCommand cmd = new();
-            await cmd.ProcessAsync(opts);
-        }
-
-        private static async Task RunAddTimeMarker(AddTimeMarkerOptions opts)
-        {
-            AddTimeMarkerCommand cmd = new();
-            await cmd.ProcessAsync(opts);
-        }
-
-        private static async Task RunAddCategory(AddCategoryOptions opts)
-        {
-            AddCategoryCommand cmd = new();
-            await cmd.ProcessAsync(opts);
+            CommandList commandList = new();
+            Type type = obj as Type;
+            await commandList[obj.GetType()](obj);
         }
 
         private static void ShowDimeScheduler()

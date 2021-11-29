@@ -18,8 +18,8 @@
     <PackageProjectUrl>https://github.com/dime-scheduler/cli</PackageProjectUrl>
   </PropertyGroup>
   <PropertyGroup>
-    <Authors>Dimenics</Authors>
-    <Company>Dimenics</Company>
+    <Authors>Dime Software</Authors>
+    <Company>Dime Software</Company>
     <Product>Dime.Scheduler</Product>
     <AssemblyTitle>Dime.Scheduler</AssemblyTitle>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
@@ -30,13 +30,13 @@
 
   <PropertyGroup>
     <VersionPrefix>0.0.1</VersionPrefix>
-    <VersionSuffix>alpha.1</VersionSuffix>
+    <VersionSuffix>alpha.2</VersionSuffix>
     <AssemblyVersion>0.0.1.0</AssemblyVersion>
     <FileVersion>0.0.1.0</FileVersion>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="CommandLineParser" Version="2.8.0" />
-    <PackageReference Include="Dime.Scheduler.Sdk" Version="0.1.0-beta.2" />
+    <PackageReference Include="Dime.Scheduler.Sdk" Version="1.0.0-beta.1" />
   </ItemGroup>
 
   <ItemGroup>
