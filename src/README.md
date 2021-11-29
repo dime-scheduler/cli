@@ -12,7 +12,7 @@ dotnet tool install Dime.Scheduler.CLI --global --version 0.0.1-alpha.4
 
 ## Prerequisites
 
-To clone and run this application, you'll need Visual Studio 16.7 or higher. The application is built with C# 9 and targets .NET 5.0.
+To clone and run this application, you'll need Visual Studio 16.7 or higher. The application is built with C# 10 and targets .NET 6.0.
 
 ## Usage
 
