@@ -16,7 +16,7 @@ namespace Dime.Scheduler.CLI
         [Option(Required = true)]
         public string JobNo { get; set; }
 
-        [Option]
+        [Option(Required = true)]
         public string ShortDescription { get; set; }
 
         [Option]
