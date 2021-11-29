@@ -27,6 +27,9 @@ namespace Dime.Scheduler.CLI
             AddCommand<AddResourceCommand, AddResourceOptions>();
             AddCommand<AddActionUriCommand, AddActionUriOptions>();
             AddCommand<AddAssignmentCommand, AddAssignmentOptions>();
+            AddCommand<AddTaskFilterValueCommand, AddTaskFilterValueOptions>();
+            AddCommand<AddTaskLockedCommand, AddTaskLockedOptions>();
+            AddCommand<AddTaskUriCommand, AddTaskUriOptions>();
         }
 
         private void AddCommand<TCommand, TOptions>()
