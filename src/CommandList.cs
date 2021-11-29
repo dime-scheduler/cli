@@ -9,22 +9,27 @@ namespace Dime.Scheduler.CLI
     {
         public CommandList()
         {
-            Add(typeof(AddTimeMarkerOptions), RunCommand<AddTimeMarkerCommand, AddTimeMarkerOptions>);
-            Add(typeof(AddPinOptions), RunCommand<AddPinCommand, AddPinOptions>);
-            Add(typeof(AddCategoryOptions), RunCommand<AddCategoryCommand, AddCategoryOptions>);
-            Add(typeof(AddAppointmentOptions), RunCommand<AddAppointmentCommand, AddAppointmentOptions>);
-            Add(typeof(AddTransientMessageOptions), RunCommand<AddTransientMessageCommand, AddTransientMessageOptions>);
-            Add(typeof(AddResourceLiveLocationOptions), RunCommand<AddLiveResourceLocationCommand, AddResourceLiveLocationOptions>);
-            Add(typeof(AddContainerOptions), RunCommand<AddContainerCommand, AddContainerOptions>);
-            Add(typeof(AddAppointmentContainerOptions), RunCommand<AddAppointmentContainerCommand, AddAppointmentContainerOptions>);
-            Add(typeof(AddUserOptions), RunCommand<AddUserCommand, AddUserOptions>);
-            Add(typeof(AddJobOptions), RunCommand<AddJobCommand, AddJobOptions>);
-            Add(typeof(AddTaskOptions), RunCommand<AddTaskCommand, AddTaskOptions>);
-            Add(typeof(AddNotificationOptions), RunCommand<AddNotificationCommand, AddNotificationOptions>);
-            Add(typeof(AddFilterGroupOptions), RunCommand<AddFilterGroupCommand, AddFilterGroupOptions>);
-            Add(typeof(AddFilterValueOptions), RunCommand<AddFilterValueCommand, AddFilterValueOptions>);
-            Add(typeof(AddCaptionOptions), RunCommand<AddCaptionCommand, AddCaptionOptions>);
+            AddCommand<AddTimeMarkerCommand, AddTimeMarkerOptions>();
+            AddCommand<AddPinCommand, AddPinOptions>();
+            AddCommand<AddCategoryCommand, AddCategoryOptions>();
+            AddCommand<AddAppointmentCommand, AddAppointmentOptions>();
+            AddCommand<AddTransientMessageCommand, AddTransientMessageOptions>();
+            AddCommand<AddLiveResourceLocationCommand, AddResourceLiveLocationOptions>();
+            AddCommand<AddContainerCommand, AddContainerOptions>();
+            AddCommand<AddAppointmentContainerCommand, AddAppointmentContainerOptions>();
+            AddCommand<AddUserCommand, AddUserOptions>();
+            AddCommand<AddJobCommand, AddJobOptions>();
+            AddCommand<AddTaskCommand, AddTaskOptions>();
+            AddCommand<AddNotificationCommand, AddNotificationOptions>();
+            AddCommand<AddFilterGroupCommand, AddFilterGroupOptions>();
+            AddCommand<AddFilterValueCommand, AddFilterValueOptions>();
+            AddCommand<AddCaptionCommand, AddCaptionOptions>();
         }
+
+        private void AddCommand<TCommand, TOptions>()
+            where TCommand : ICommand<TOptions>, new()
+            where TOptions : class
+            => Add(typeof(TOptions), RunCommand<TCommand, TOptions>);
 
         private static Task RunCommand<TCommand, TOptions>(object opts)
             where TCommand : ICommand<TOptions>, new()
