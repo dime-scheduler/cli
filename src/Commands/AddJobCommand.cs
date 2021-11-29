@@ -11,7 +11,7 @@ namespace Dime.Scheduler.CLI.Commands
         {
             try
             {
-                Console.WriteLine($"Adding job with no {options.JobNo}");
+                Console.WriteLine($"Adding job with number {options.JobNo}.");
 
                 IAuthenticator authenticator = new FormsAuthenticator(options.Uri, options.User, options.Password);
                 DimeSchedulerClient client = new(options.Uri, authenticator);
