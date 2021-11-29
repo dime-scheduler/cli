@@ -24,6 +24,7 @@ namespace Dime.Scheduler.CLI
             AddCommand<AddFilterGroupCommand, AddFilterGroupOptions>();
             AddCommand<AddFilterValueCommand, AddFilterValueOptions>();
             AddCommand<AddCaptionCommand, AddCaptionOptions>();
+            AddCommand<AddResourceCommand, AddResourceOptions>();
         }
 
         private void AddCommand<TCommand, TOptions>()
