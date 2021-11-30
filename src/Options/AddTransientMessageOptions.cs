@@ -11,7 +11,7 @@ namespace Dime.Scheduler.CLI
         [Option('s', "severity", Required = true)]
         public int Severity { get; set; }
 
-        [Option('a', "to", Required = true)]
+        [Option('a', "to")]
         public string To { get; set; }
     }
 }

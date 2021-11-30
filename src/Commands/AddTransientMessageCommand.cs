@@ -21,7 +21,7 @@ namespace Dime.Scheduler.CLI.Commands
                 {
                     Severity = (Severity)options.Severity,
                     Text = options.Text,
-                    User =  options.To
+                    User = options.To
                 };
 
                 await endpoint.PostAsync(message);
