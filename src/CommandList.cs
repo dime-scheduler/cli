@@ -9,38 +9,38 @@ namespace Dime.Scheduler.CLI
     {
         public CommandList()
         {
-            AddCommand<AddTimeMarkerCommand, AddTimeMarkerOptions>();
-            AddCommand<AddPinCommand, AddPinOptions>();
-            AddCommand<AddCategoryCommand, AddCategoryOptions>();
-            AddCommand<AddAppointmentCommand, AddAppointmentOptions>();
-            AddCommand<AddTransientMessageCommand, AddTransientMessageOptions>();
-            AddCommand<AddLiveResourceLocationCommand, AddResourceLiveLocationOptions>();
-            AddCommand<AddContainerCommand, AddContainerOptions>();
-            AddCommand<AddAppointmentContainerCommand, AddAppointmentContainerOptions>();
-            AddCommand<AddUserCommand, AddUserOptions>();
-            AddCommand<AddJobCommand, AddJobOptions>();
-            AddCommand<AddTaskCommand, AddTaskOptions>();
-            AddCommand<AddNotificationCommand, AddNotificationOptions>();
-            AddCommand<AddFilterGroupCommand, AddFilterGroupOptions>();
-            AddCommand<AddFilterValueCommand, AddFilterValueOptions>();
-            AddCommand<AddCaptionCommand, AddCaptionOptions>();
-            AddCommand<AddResourceCommand, AddResourceOptions>();
-            AddCommand<AddActionUriCommand, AddActionUriOptions>();
-            AddCommand<AddAssignmentCommand, AddAssignmentOptions>();
-            AddCommand<AddTaskFilterValueCommand, AddTaskFilterValueOptions>();
-            AddCommand<AddTaskLockedCommand, AddTaskLockedOptions>();
-            AddCommand<AddTaskUriCommand, AddTaskUriOptions>();
-            AddCommand<AddAppointmentCategoryCommand, AddAppointmentCategoryOptions>();
-            AddCommand<AddAppointmentContentCommand, AddAppointmentContentOptions>();
-            AddCommand<AddAppointmentImportanceCommand, AddAppointmentImportanceOptions>();
-            AddCommand<AddAppointmentPlanningQuantityCommand, AddAppointmentPlanningQuantityOptions>();
-            AddCommand<AddAppointmentTimeMarkerCommand, AddAppointmentTimeMarkerOptions>();
-            AddCommand<AddAppointmentUriCommand, AddAppointmentUriOptions>();
-            AddCommand<AddAppointmentLockedCommand, AddAppointmentLockedOptions>();
-            AddCommand<AddResourceCalendarCommand, AddResourceCalendarOptions>();
-            AddCommand<AddResourceCapacityCommand, AddResourceCapacityOptions>();
-            AddCommand<AddResourceFilterValueCommand, AddResourceFilterValueOptions>();
-            AddCommand<AddResourceUriCommand, AddResourceUriOptions>();
+            AddCommand<TimeMarkerCommand, TimeMarkerOptions>();
+            AddCommand<PinCommand, PinOptions>();
+            AddCommand<CategoryCommand, CategoryOptions>();
+            AddCommand<AppointmentCommand, AppointmentOptions>();
+            AddCommand<TransientMessageCommand, TransientMessageOptions>();
+            AddCommand<LiveResourceLocationCommand, ResourceLiveLocationOptions>();
+            AddCommand<ContainerCommand, ContainerOptions>();
+            AddCommand<AppointmentContainerCommand, AppointmentContainerOptions>();
+            AddCommand<UserCommand, UserOptions>();
+            AddCommand<JobCommand, JobOptions>();
+            AddCommand<TaskCommand, TaskOptions>();
+            AddCommand<NotificationCommand, NotificationOptions>();
+            AddCommand<FilterGroupCommand, FilterGroupOptions>();
+            AddCommand<FilterValueCommand, FilterValueOptions>();
+            AddCommand<CaptionCommand, CaptionOptions>();
+            AddCommand<ResourceCommand, ResourceOptions>();
+            AddCommand<ActionUriCommand, ActionUriOptions>();
+            AddCommand<AssignmentCommand, AssignmentOptions>();
+            AddCommand<TaskFilterValueCommand, TaskFilterValueOptions>();
+            AddCommand<TaskLockedCommand, TaskLockedOptions>();
+            AddCommand<TaskUriCommand, TaskUriOptions>();
+            AddCommand<AppointmentCategoryCommand, AppointmentCategoryOptions>();
+            AddCommand<AppointmentContentCommand, AppointmentContentOptions>();
+            AddCommand<AppointmentImportanceCommand, AppointmentImportanceOptions>();
+            AddCommand<AppointmentPlanningQuantityCommand, AppointmentPlanningQuantityOptions>();
+            AddCommand<AppointmentTimeMarkerCommand, AppointmentTimeMarkerOptions>();
+            AddCommand<AppointmentUriCommand, AppointmentUriOptions>();
+            AddCommand<AppointmentLockedCommand, AppointmentLockedOptions>();
+            AddCommand<ResourceCalendarCommand, ResourceCalendarOptions>();
+            AddCommand<ResourceCapacityCommand, ResourceCapacityOptions>();
+            AddCommand<ResourceFilterValueCommand, ResourceFilterValueOptions>();
+            AddCommand<ResourceUriCommand, ResourceUriOptions>();
         }
 
         private void AddCommand<TCommand, TOptions>()

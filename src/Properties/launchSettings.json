@@ -2,7 +2,7 @@
   "profiles": {
     "Dime.Scheduler.CLI": {
       "commandName": "Project",
-      "commandLineArgs": "addPin -h 000000 -name Test -u google.com -c test -p no"
+      "commandLineArgs": "pin -d -h 000000 -name Test -u google.com -c test -p no"
     }
   }
 }
