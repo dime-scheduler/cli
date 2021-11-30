@@ -12,12 +12,16 @@
 </p>
 <h1 align="center">Dime.Scheduler CLI</h1>
 
-Connect with Dime.Scheduler through a .NET Tool.
+Connect with Dime.Scheduler through a .NET Tool. Check out the [📚 wiki](https://github.com/dime-scheduler/cli/wiki) for all the information on the CLI.
 
 ## Installation
 
+> 🚧The Dime.Scheduler is currently in preview mode.
+
+To install the CLI, open the command-line in Windows and run the following command:
+
 ```cmd
-dotnet tool install Dime.Scheduler.CLI --global --version 0.0.1-beta.latest
+dotnet tool install Dime.Scheduler.CLI --global
 ```
 
 ## Prerequisites
