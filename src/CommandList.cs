@@ -30,6 +30,13 @@ namespace Dime.Scheduler.CLI
             AddCommand<AddTaskFilterValueCommand, AddTaskFilterValueOptions>();
             AddCommand<AddTaskLockedCommand, AddTaskLockedOptions>();
             AddCommand<AddTaskUriCommand, AddTaskUriOptions>();
+            AddCommand<AddAppointmentCategoryCommand, AddAppointmentCategoryOptions>();
+            AddCommand<AddAppointmentContentCommand, AddAppointmentContentOptions>();
+            AddCommand<AddAppointmentImportanceCommand, AddAppointmentImportanceOptions>();
+            AddCommand<AddAppointmentPlanningQuantityCommand, AddAppointmentPlanningQuantityOptions>();
+            AddCommand<AddAppointmentTimeMarkerCommand, AddAppointmentTimeMarkerOptions>();
+            AddCommand<AddAppointmentUriCommand, AddAppointmentUriOptions>();
+            AddCommand<AddAppointmentLockedCommand, AddAppointmentLockedOptions>();
         }
 
         private void AddCommand<TCommand, TOptions>()
