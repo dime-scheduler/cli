@@ -20,6 +20,12 @@ namespace Dime.Scheduler.CLI.Commands
 
                 AppointmentUri appointmentUri = new()
                 {
+                    AppointmentGuid = options.AppointmentGuid,
+                    AppointmentId = options.AppointmentId,
+                    Uri = options.Uri,
+                    SourceApp = options.SourceApp,
+                    SourceType = options.SourceType,
+                    Description = options.Description
                 };
 
                 ImportSet result = await importEndpoint.ProcessAsync(appointmentUri, TransactionType.Append);

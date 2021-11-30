@@ -20,6 +20,12 @@ namespace Dime.Scheduler.CLI.Commands
 
                 AppointmentTimeMarker appointmentTimeMarker = new()
                 {
+                    AppointmentGuid = options.AppointmentGuid,
+                    AppointmentId = options.AppointmentId,
+                    TimeMarker = options.TimeMarker,
+                    SentFromBackOffice = options.SentFromBackOffice,
+                    SourceApp = options.SourceApp,
+                    SourceType = options.SourceType
                 };
 
                 ImportSet result = await importEndpoint.ProcessAsync(appointmentTimeMarker, TransactionType.Append);

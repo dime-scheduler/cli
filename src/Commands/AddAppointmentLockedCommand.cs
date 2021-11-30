@@ -20,6 +20,12 @@ namespace Dime.Scheduler.CLI.Commands
 
                 AppointmentLocked appointmentLocked = new()
                 {   
+                    AppointmentGuid = options.AppointmentGuid,
+                    AppointmentId = options.AppointmentId,
+                    Locked = options.Locked,
+                    SentFromBackOffice = options.SentFromBackOffice,
+                    SourceApp = options.SourceApp,
+                    SourceType = options.SourceType
                 };
 
                 ImportSet result = await importEndpoint.ProcessAsync(appointmentLocked, TransactionType.Append);

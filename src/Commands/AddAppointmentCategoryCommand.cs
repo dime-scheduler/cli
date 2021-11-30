@@ -20,6 +20,12 @@ namespace Dime.Scheduler.CLI.Commands
 
                 AppointmentCategory appointmentCategory = new()
                 {
+                    AppointmentGuid = options.AppointmentGuid,
+                    AppointmentId = options.AppointmentId,
+                    Category = options.Category,
+                    SentFromBackOffice = options.SentFromBackOffice,
+                    SourceApp = options.SourceApp,
+                    SourceType = options.SourceType
                 };
 
                 ImportSet result = await importEndpoint.ProcessAsync(appointmentCategory, TransactionType.Append);
