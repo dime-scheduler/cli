@@ -22,7 +22,7 @@ namespace Dime.Scheduler.CLI.Commands
                 IImportEndpoint importEndpoint = await client.Import.Request();
                 ImportSet result = await importEndpoint.ProcessAsync(options.ToImport(), TransactionType.Append);
 
-                Console.WriteLine(result.Success ? "Finished successfully" : "Did not complete successfully");
+                Console.WriteLine(result.Success ? "Completed successfully" : "Did not complete successfully");
             }
             catch (Exception ex)
             {
