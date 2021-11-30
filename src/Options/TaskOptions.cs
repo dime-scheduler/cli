@@ -7,403 +7,403 @@ namespace Dime.Scheduler.CLI
     [Verb("task", HelpText = "Add or remove a task.")]
     public class TaskOptions : BaseOptions, IImportConvertable
     {
-        [Option(Required = true)]
+        [Option(Required = true, HelpText = "The source app.")]
         public string SourceApp { get; set; }
 
-        [Option(Required = true)]
+        [Option(Required = true, HelpText = "The source type.")]
         public string SourceType { get; set; }
 
-        [Option(Required = true)]
+        [Option(Required = true, HelpText = "The job's unique identifier.")]
         public string JobNo { get; set; }
 
-        [Option(Required = true)]
+        [Option(Required = true, HelpText = "The task's unique identifier.")]
         public string TaskNo { get; set; }
 
-        [Option]
+        [Option(HelpText = "The task type.")]
         public TaskType TaskType { get; set; }
 
-        [Option(Required = true)]
+        [Option(Required = true, HelpText = "A short text describing the task.")]
         public string ShortDescription { get; set; }
 
-        [Option]
+        [Option(HelpText = "A longer text to describe the task")]
         public string Description { get; set; }
 
-        [Option]
+        [Option(HelpText = "The name;")]
         public string Name { get; set; }
 
-        [Option]
+        [Option(HelpText = "The type.")]
         public string Type { get; set; }
 
-        [Option]
+        [Option(HelpText = "The category.")]
         public string Category { get; set; }
 
-        [Option]
+        [Option(HelpText = "The time marker.")]
         public string TimeMarker { get; set; }
 
-        [Option]
+        [Option(HelpText = "The pin.")]
         public string Pin { get; set; }
 
-        [Option]
+        [Option(HelpText = "The service number.")]
         public string ServiceNo { get; set; }
 
-        [Option]
+        [Option(HelpText = "The service group.")]
         public string ServiceGroup { get; set; }
 
-        [Option]
+        [Option(HelpText = "The service class.")]
         public string ServiceClass { get; set; }
 
-        [Option]
+        [Option(HelpText = "The service serial number.")]
         public string ServiceSerialNo { get; set; }
 
-        [Option]
+        [Option(HelpText = "The service name.")]
         public string ServiceName { get; set; }
 
-        [Option]
+        [Option(HelpText = "The IRIS fault.")]
         public string IrisFault { get; set; }
 
-        [Option]
+        [Option(HelpText = "The IRIS symptom.")]
         public string IrisSymptom { get; set; }
 
-        [Option]
+        [Option(HelpText = "The IRIS area.")]
         public string IrisArea { get; set; }
 
-        [Option]
+        [Option(HelpText = "The IRIS reason.")]
         public string IrisReason { get; set; }
 
-        [Option]
+        [Option(HelpText = "The IRIS resolution.")]
         public string IrisResolution { get; set; }
 
-        [Option]
+        [Option(HelpText = "Skill.")]
         public string Skill1 { get; set; }
 
-        [Option]
+        [Option(HelpText = "Skill.")]
         public string Skill2 { get; set; }
 
-        [Option]
+        [Option(HelpText = "Skill.")]
         public string Skill3 { get; set; }
 
-        [Option]
+        [Option(HelpText = "The contract number.")]
         public string ContractNo { get; set; }
 
-        [Option]
+        [Option(HelpText = "The contract type.")]
         public string ContractType { get; set; }
 
-        [Option]
+        [Option(HelpText = "The contract description.")]
         public string ContractDescription { get; set; }
 
-        [Option]
+        [Option(HelpText = "The contract start date.")]
         public DateTime? ContractStartDate { get; set; }
 
-        [Option]
+        [Option(HelpText = "The contract end date.")]
         public DateTime? ContractEndDate { get; set; }
 
-        [Option]
+        [Option(HelpText = "The warranty start date.")]
         public DateTime? PartsWarrantyStartDate { get; set; }
 
-        [Option]
+        [Option(HelpText = "The warranty end date.")]
         public DateTime? PartsWarrantyEndDate { get; set; }
 
-        [Option]
+        [Option(HelpText = "The labor warranty start date.")]
         public DateTime? LaborWarrantyStartDate { get; set; }
 
-        [Option]
+        [Option(HelpText = "The labor warranty end date.")]
         public DateTime? LaborWarrantyEndDate { get; set; }
 
-        [Option]
+        [Option(HelpText = "The task's priority.")]
         public Importance Importance { get; set; }
 
-        [Option]
+        [Option(HelpText = "The status.")]
         public string Status { get; set; }
 
-        [Option]
+        [Option(HelpText = "The expected response date.")]
         public DateTime? ExpectedResponseDateTime { get; set; }
 
-        [Option]
+        [Option(HelpText = "The actual response date.")]
         public DateTime? ActualResponseDateTime { get; set; }
 
-        [Option]
+        [Option(HelpText = "The requested start date.")]
         public DateTime? RequestedStartDate { get; set; }
 
-        [Option]
+        [Option(HelpText = "The requested end date.")]
         public DateTime? RequestedEndDate { get; set; }
 
-        [Option]
+        [Option(HelpText = "The requested start time.")]
         public TimeSpan? RequestedStartTime { get; set; }
 
-        [Option]
+        [Option(HelpText = "The requested end time.")]
         public TimeSpan? RequestedEndTime { get; set; }
 
-        [Option]
+        [Option(HelpText = "The confirmed start date.")]
         public DateTime? ConfirmedStartDate { get; set; }
 
-        [Option]
+        [Option(HelpText = "The confirmed end date.")]
         public DateTime? ConfirmedEndDate { get; set; }
 
-        [Option]
+        [Option(HelpText = "The actual start date.")]
         public DateTime? ActualStartDate { get; set; }
 
-        [Option]
+        [Option(HelpText = "The actual end date.")]
         public DateTime? ActualEndDate { get; set; }
 
-        [Option]
+        [Option(HelpText = "The location description.")]
         public string LocationDescription { get; set; }
 
-        [Option]
+        [Option(HelpText = "The duration.")]
         public TimeSpan? Duration { get; set; }
 
-        [Option]
+        [Option(HelpText = "The duration in seconds.")]
         public long DurationInSeconds { get; set; }
 
-        [Option]
+        [Option(HelpText = "The subject.")]
         public string Subject { get; set; }
 
-        [Option]
+        [Option(HelpText = "The body.")]
         public string Body { get; set; }
 
-        [Option]
+        [Option(HelpText = "True to mark it as an infinite task.")]
         public bool InfiniteTask { get; set; }
 
-        [Option]
+        [Option(HelpText = "The minimum date of the task.")]
         public DateTime? TaskOpenAsOf { get; set; }
 
-        [Option]
+        [Option(HelpText = "The maximum date of the task.")]
         public DateTime? TaskOpenTill { get; set; }
 
-        [Option]
+        [Option(HelpText = "The required total duration.")]
         public TimeSpan? RequiredTotalDuration { get; set; }
 
-        [Option]
+        [Option(HelpText = "The required amount of resources.")]
         public int RequiredNoResources { get; set; }
 
-        [Option]
+        [Option(HelpText = "The earliest date allowed.")]
         public DateTime? AppointmentEarliestAllowed { get; set; }
 
-        [Option]
+        [Option(HelpText = "The latest date allowed.")]
         public DateTime? AppointmentLatestAllowed { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free text field.")]
         public string FreeText1 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free text field.")]
         public string FreeText2 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free text field.")]
         public string FreeText3 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free text field.")]
         public string FreeText4 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free text field.")]
         public string FreeText5 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free text field.")]
         public string FreeText6 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free text field.")]
         public string FreeText7 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free text field.")]
         public string FreeText8 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free text field.")]
         public string FreeText9 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free text field.")]
         public string FreeText10 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free text field.")]
         public string FreeText11 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free text field.")]
         public string FreeText12 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free text field.")]
         public string FreeText13 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free text field.")]
         public string FreeText14 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free text field.")]
         public string FreeText15 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free text field.")]
         public string FreeText16 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free text field.")]
         public string FreeText17 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free text field.")]
         public string FreeText18 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free text field.")]
         public string FreeText19 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free text field.")]
         public string FreeText20 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free decimal field.")]
         public decimal FreeDecimal1 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free decimal field.")]
         public decimal FreeDecimal2 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free decimal field.")]
         public decimal FreeDecimal3 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free decimal field.")]
         public decimal FreeDecimal4 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free decimal field.")]
         public decimal FreeDecimal5 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free date field.")]
         public DateTime? FreeDate1 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free date field.")]
         public DateTime? FreeDate2 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free date field.")]
         public DateTime? FreeDate3 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free date field.")]
         public DateTime? FreeDate4 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free date field.")]
         public DateTime? FreeDate5 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free boolean field.")]
         public bool FreeBit1 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free boolean field.")]
         public bool FreeBit2 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free boolean field.")]
         public bool FreeBit3 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free boolean field.")]
         public bool FreeBit4 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free boolean field.")]
         public bool FreeBit5 { get; set; }
 
-        [Option]
+        [Option(HelpText = "The URI.")]
         public string Url1 { get; set; }
 
-        [Option]
+        [Option(HelpText = "The URI description.")]
         public string UrlDescription1 { get; set; }
 
-        [Option]
+        [Option(HelpText = "The URI.")]
         public string Url2 { get; set; }
 
-        [Option]
+        [Option(HelpText = "The URI description.")]
         public string UrlDescription2 { get; set; }
 
-        [Option]
+        [Option(HelpText = "The URI.")]
         public string Url3 { get; set; }
 
-        [Option]
+        [Option(HelpText = "The URI description.")]
         public string UrlDescription3 { get; set; }
 
-        [Option]
+        [Option(HelpText = "The certificate number.")]
         public string CertificateNo { get; set; }
 
-        [Option]
+        [Option(HelpText = "The required total duration in seconds.")]
         public long RequiredTotalDurationInSeconds { get; set; }
 
-        [Option]
+        [Option(HelpText = "True to ignore assignments.")]
         public bool DoNotCountAppointmentResource { get; set; }
 
-        [Option]
+        [Option(HelpText = "True to mark the task as complete.")]
         public bool IsComplete { get; set; }
 
-        [Option]
+        [Option(HelpText = "The planning unit of measure.")]
         public string PlanningUOM { get; set; }
 
-        [Option]
+        [Option(HelpText = "The conversion rate.")]
         public decimal PlanningUOMConversion { get; set; }
 
-        [Option]
+        [Option(HelpText = "The planning quantity.")]
         public decimal PlanningQty { get; set; }
 
-        [Option]
+        [Option(HelpText = "True to use fix planning quantity.")]
         public bool UseFixPlanningQty { get; set; }
 
-        [Option]
+        [Option(HelpText = "True to round the unit of measure.")]
         public bool RoundToUOM { get; set; }
 
-        [Option]
+        [Option(HelpText = "The appointment template.")]
         public string AppointmentTemplate { get; set; }
 
-        [Option]
+        [Option(HelpText = "The bulk planning quantity.")]
         public decimal BulkPlanningQty { get; set; }
 
-        [Option]
+        [Option(HelpText = "The start date.")]
         public DateTime? StartDate { get; set; }
 
-        [Option]
+        [Option(HelpText = "The end date.")]
         public DateTime? EndDate { get; set; }
 
-        [Option]
+        [Option(HelpText = "The percentage of completion.")]
         public int PercentDone { get; set; }
 
-        [Option]
+        [Option(HelpText = "The scheduling mode.")]
         public SchedulingMode SchedulingMode { get; set; }
 
-        [Option]
+        [Option(HelpText = "The baseline start date.")]
         public DateTime? BaseLineStartDate { get; set; }
 
-        [Option]
+        [Option(HelpText = "The baseline end date.")]
         public DateTime? BaseLineEndDate { get; set; }
 
-        [Option]
+        [Option(HelpText = "The percentage of completion of the baseline.")]
         public int BaseLinePercentDone { get; set; }
 
-        [Option]
+        [Option(HelpText = "The deadline.")]
         public DateTime? DeadLine { get; set; }
 
-        [Option]
+        [Option(HelpText = "The index.")]
         public int Index { get; set; }
 
-        [Option]
+        [Option(HelpText = "The constraint type.")]
         public int ConstraintType { get; set; }
 
-        [Option]
+        [Option(HelpText = "The constraint date time.")]
         public DateTime? ConstraintDatetime { get; set; }
 
-        [Option]
+        [Option(HelpText = "The parent task number.")]
         public string ParentTaskNo { get; set; }
 
-        [Option]
+        [Option(HelpText = "The calendar code.")]
         public string CalendarCode { get; set; }
 
-        [Option]
+        [Option(HelpText = "The predecessor task number.")]
         public string PredecessorTaskNo { get; set; }
 
-        [Option]
+        [Option(HelpText = "The lag to the predecessor.")]
         public int PredecessorLag { get; set; }
 
-        [Option]
+        [Option(HelpText = "True to schedule the task manually.")]
         public bool ManuallyScheduled { get; set; }
 
-        [Option]
+        [Option(HelpText = "The task notes.")]
         public string Note { get; set; }
 
-        [Option]
+        [Option(HelpText = "True to overrule.")]
         public bool OverRuleGanttPlanning { get; set; }
 
-        [Option]
+        [Option(HelpText = "True to ignore calendars.")]
         public bool IgnoreCalendars { get; set; }
 
-        [Option]
+        [Option(HelpText = "The container name.")]
         public string ContainerName { get; set; }
 
-        [Option]
+        [Option(HelpText = "The container index.")]
         public int ContainerIndex { get; set; }
 
-        [Option]
+        [Option(HelpText = "True to check appointments.")]
         public bool CheckAppointments { get; set; }
 
-        [Option]
+        [Option(HelpText = "True to mark the record is sent from the back office.")]
         public bool SentFromBackOffice { get; set; } = true;
 
         public IImportRequestable ToImport() => (Sdk.Import.Task)this;

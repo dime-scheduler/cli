@@ -3,25 +3,25 @@ using Dime.Scheduler.Sdk.Import;
 
 namespace Dime.Scheduler.CLI
 {
-    [Verb("taskuri", HelpText = "Add or remove a URI to a task.")]
+    [Verb("taskuri", HelpText = "Add or remove a URI to or from a task.")]
     public class TaskUriOptions : BaseOptions, IImportConvertable
     {
-        [Option]
+        [Option(HelpText = "The source app.")]
         public string SourceApp { get; set; }
 
-        [Option]
+        [Option(HelpText = "The source type.")]
         public string SourceType { get; set; }
 
-        [Option]
+        [Option(HelpText = "The job's unique identifier.")]
         public string JobNo { get; set; }
 
-        [Option]
+        [Option(HelpText = "The task's unique identifier.")]
         public string TaskNo { get; set; }
 
-        [Option]
+        [Option(HelpText = "The URI.")]
         public string Link { get; set; }
 
-        [Option]
+        [Option(HelpText = "The URI's text.")]
         public string Description { get; set; }
 
         public IImportRequestable ToImport() => (TaskUri)this;

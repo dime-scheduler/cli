@@ -7,340 +7,340 @@ namespace Dime.Scheduler.CLI
     [Verb("job", HelpText = "Add or remove a job.")]
     public class JobOptions : BaseOptions, IImportConvertable
     {
-        [Option(Required = true)]
+        [Option(Required = true, HelpText = "The source app.")]
         public string SourceApp { get; set; }
 
-        [Option(Required = true)]
+        [Option(Required = true, HelpText = "The source type.")]
         public string SourceType { get; set; }
 
-        [Option(Required = true)]
+        [Option(Required = true, HelpText = "The unique job number.")]
         public string JobNo { get; set; }
 
-        [Option(Required = true)]
+        [Option(Required = true, HelpText = "A short text describing the job.")]
         public string ShortDescription { get; set; }
 
-        [Option]
+        [Option(HelpText = "A longer text to describe the job.")]
         public string Description { get; set; }
 
-        [Option]
+        [Option(HelpText = "The type of job.")]
         public string Type { get; set; }
 
-        [Option]
+        [Option(HelpText = "The job name.")]
         public string Name { get; set; }
 
-        [Option]
+        [Option(HelpText = "The job's category.")]
         public string Category { get; set; }
 
-        [Option]
+        [Option(HelpText = "The job's time marker.")]
         public string TimeMarker { get; set; }
 
-        [Option]
+        [Option(HelpText = "The job's name.")]
         public string Pin { get; set; }
 
-        [Option]
+        [Option(HelpText = "The customer's unique number.")]
         public string CustomerNo { get; set; }
 
-        [Option]
+        [Option(HelpText = "The customer name.")]
         public string CustomerName { get; set; }
 
-        [Option]
+        [Option(HelpText = "The customer's address.")]
         public string CustomerAddress { get; set; }
 
-        [Option]
+        [Option(HelpText = "The customer's longitude.")]
         public string CustomerAddressGeoLong { get; set; }
 
-        [Option]
+        [Option(HelpText = "The customer's latitude.")]
         public string CustomerAddressGeoLat { get; set; }
 
-        [Option]
+        [Option(HelpText = "The customer's phone number.")]
         public string CustomerPhone { get; set; }
 
-        [Option]
+        [Option(HelpText = "The customer's email.")]
         public string CustomerEmail { get; set; }
 
-        [Option]
+        [Option(HelpText = "The job's contact number.")]
         public string ContactNo { get; set; }
 
-        [Option]
+        [Option(HelpText = "The job's contact name.")]
         public string ContactName { get; set; }
 
-        [Option]
+        [Option(HelpText = "The job's contact address.")]
         public string ContactAddress { get; set; }
 
-        [Option]
+        [Option(HelpText = "The job's contact address longitude.")]
         public string ContactAddressGeoLong { get; set; }
 
-        [Option]
+        [Option(HelpText = "The job's contact address latitude.")]
         public string ContactAddressGeoLat { get; set; }
 
-        [Option]
+        [Option(HelpText = "The job's contact phone number.")]
         public string ContactPhone { get; set; }
 
-        [Option]
+        [Option(HelpText = "The job's contact email.")]
         public string ContactEmail { get; set; }
 
-        [Option]
+        [Option(HelpText = "The job site number.")]
         public string SiteNo { get; set; }
 
-        [Option]
+        [Option(HelpText = "The job site name.")]
         public string SiteName { get; set; }
 
-        [Option]
+        [Option(HelpText = "The job site address.")]
         public string SiteAddress { get; set; }
 
-        [Option]
+        [Option(HelpText = "The job site address longitude.")]
         public string SiteAddressGeoLong { get; set; }
 
-        [Option]
+        [Option(HelpText = "The job site address latitude.")]
         public string SiteAddressGeoLat { get; set; }
 
-        [Option]
+        [Option(HelpText = "The job site phone.")]
         public string SitePhone { get; set; }
 
-        [Option]
+        [Option(HelpText = "The job site email.")]
         public string SiteEmail { get; set; }
 
-        [Option]
+        [Option(HelpText = "The job site region.")]
         public string SiteRegion { get; set; }
 
-        [Option]
+        [Option(HelpText = "The job site street.")]
         public string SiteStreet { get; set; }
 
-        [Option]
+        [Option(HelpText = "The job site street number.")]
         public string SiteStreetNo { get; set; }
 
-        [Option]
+        [Option(HelpText = "The job site zip code.")]
         public string SitePostcode { get; set; }
 
-        [Option]
+        [Option(HelpText = "The job site city.")]
         public string SiteCity { get; set; }
 
-        [Option]
+        [Option(HelpText = "The job site county.")]
         public string SiteCounty { get; set; }
 
-        [Option]
+        [Option(HelpText = "The job site state.")]
         public string SiteState { get; set; }
 
-        [Option]
+        [Option(HelpText = "The job site country.")]
         public string SiteCountry { get; set; }
 
-        [Option]
+        [Option(HelpText = "The job site from unique number.")]
         public string SiteFromNo { get; set; }
 
-        [Option]
+        [Option(HelpText = "The job site from name.")]
         public string SiteFromName { get; set; }
 
-        [Option]
+        [Option(HelpText = "The job site from address.")]
         public string SiteFromAddress { get; set; }
 
-        [Option]
+        [Option(HelpText = "The job site from address longitude.")]
         public string SiteFromAddressGeoLong { get; set; }
 
-        [Option]
+        [Option(HelpText = "The job site from address latitude.")]
         public string SiteFromAddressGeoLat { get; set; }
 
-        [Option]
+        [Option(HelpText = "The job site from phone number.")]
         public string SiteFromPhone { get; set; }
 
-        [Option]
+        [Option(HelpText = "The job site from email.")]
         public string SiteFromEmail { get; set; }
 
-        [Option]
+        [Option(HelpText = "The job site from region.")]
         public string SiteFromRegion { get; set; }
 
-        [Option]
+        [Option(HelpText = "The job site from street.")]
         public string SiteFromStreet { get; set; }
 
-        [Option]
+        [Option(HelpText = "The job site from street number.")]
         public string SiteFromStreetNo { get; set; }
 
-        [Option]
+        [Option(HelpText = "The job site from post code.")]
         public string SiteFromPostcode { get; set; }
 
-        [Option]
+        [Option(HelpText = "The job site from city.")]
         public string SiteFromCity { get; set; }
 
-        [Option]
+        [Option(HelpText = "The job site from county.")]
         public string SiteFromCounty { get; set; }
 
-        [Option]
+        [Option(HelpText = "The job site from state.")]
         public string SiteFromState { get; set; }
 
-        [Option]
+        [Option(HelpText = "The job site from country.")]
         public string SiteFromCountry { get; set; }
 
-        [Option]
+        [Option(HelpText = "The unique bill number.")]
         public string BillNo { get; set; }
 
-        [Option]
+        [Option(HelpText = "The unique bill name.")]
         public string BillName { get; set; }
 
-        [Option]
+        [Option(HelpText = "The bill address.")]
         public string BillAddress { get; set; }
 
-        [Option]
+        [Option(HelpText = "The bill address longitude.")]
         public string BillAddressGeoLong { get; set; }
 
-        [Option]
+        [Option(HelpText = "The bill address latitude.")]
         public string BillAddressGeoLat { get; set; }
 
-        [Option]
+        [Option(HelpText = "The bill address phone.")]
         public string BillPhone { get; set; }
 
-        [Option]
+        [Option(HelpText = "The bill address email.")]
         public string BillEmail { get; set; }
 
-        [Option]
+        [Option(HelpText = "The bill address region.")]
         public string BillRegion { get; set; }
 
-        [Option]
+        [Option(HelpText = "The job's importance.")]
         public Importance Importance { get; set; }
 
-        [Option]
+        [Option(HelpText = "The job's creation date")]
         public DateTime? CreationDateTime { get; set; }
 
-        [Option]
+        [Option(HelpText = "The job's customer reference.")]
         public string CustomerReference { get; set; }
 
-        [Option]
+        [Option(HelpText = "The language.")]
         public string Language { get; set; }
 
-        [Option]
+        [Option(HelpText = "The job's responsible.")]
         public string Responsible { get; set; }
 
-        [Option]
+        [Option(HelpText = "The creator.")]
         public string Creator { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free text field.")]
         public string FreeText1 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free text field.")]
         public string FreeText2 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free text field.")]
         public string FreeText3 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free text field.")]
         public string FreeText4 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free text field.")]
         public string FreeText5 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free text field.")]
         public string FreeText6 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free text field.")]
         public string FreeText7 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free text field.")]
         public string FreeText8 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free text field.")]
         public string FreeText9 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free text field.")]
         public string FreeText10 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free text field.")]
         public string FreeText11 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free text field.")]
         public string FreeText12 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free text field.")]
         public string FreeText13 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free text field.")]
         public string FreeText14 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free text field.")]
         public string FreeText15 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free text field.")]
         public string FreeText16 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free text field.")]
         public string FreeText17 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free text field.")]
         public string FreeText18 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free text field.")]
         public string FreeText19 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free text field.")]
         public string FreeText20 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free decimal field.")]
         public decimal FreeDecimal1 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free decimal field.")]
         public decimal FreeDecimal2 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free decimal field.")]
         public decimal FreeDecimal3 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free decimal field.")]
         public decimal FreeDecimal4 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free decimal field.")]
         public decimal FreeDecimal5 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free date field.")]
         public DateTime? FreeDate1 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free date field.")]
         public DateTime? FreeDate2 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free date field.")]
         public DateTime? FreeDate3 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free date field.")]
         public DateTime? FreeDate4 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free date field.")]
         public DateTime? FreeDate5 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free boolean field.")]
         public bool FreeBit1 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free boolean field.")]
         public bool FreeBit2 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free boolean field.")]
         public bool FreeBit3 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free boolean field.")]
         public bool FreeBit4 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free boolean field.")]
         public bool FreeBit5 { get; set; }
 
-        [Option]
+        [Option(HelpText = "True to enable manual selection.")]
         public bool EnableManualSelection { get; set; }
 
-        [Option]
+        [Option(HelpText = "True to make it available in the Gantt chart.")]
         public bool AvailableInGantt { get; set; }
 
-        [Option]
+        [Option(HelpText = "The project's start date.")]
         public DateTime? StartDate { get; set; }
 
-        [Option]
+        [Option(HelpText = "The project's end date.")]
         public DateTime? EndDate { get; set; }
 
-        [Option]
+        [Option(HelpText = "True to allow dependencies.")]
         public bool AllowDependencies { get; set; } = true;
 
-        [Option]
+        [Option(HelpText = "The project's notes.")]
         public string Note { get; set; }
 
-        [Option]
+        [Option(HelpText = "True to allow the planning to be overridden.")]
         public bool OverRuleGanttPlanning { get; set; }
 
-        [Option]
+        [Option(HelpText = "True to check appointments.")]
         public bool CheckAppointments { get; set; }
 
-        [Option]
+        [Option(HelpText = "True to indicate whether the record is sent from the back office.")]
         public bool SentFromBackOffice { get; set; } = true;
 
         public IImportRequestable ToImport() => (Sdk.Import.Job)this;

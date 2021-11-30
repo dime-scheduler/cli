@@ -8,40 +8,40 @@ namespace Dime.Scheduler.CLI
     [Verb("notification", HelpText = "Add or remove a notification.")]
     public class NotificationOptions : BaseOptions, IImportConvertable
     {
-        [Option]
+        [Option(HelpText = "The source app.")]
         public string SourceApp { get; set; }
 
-        [Option]
+        [Option(HelpText = "The source type.")]
         public string SourceType { get; set; }
 
-        [Option]
+        [Option(HelpText = "The appointment's identifier.")]
         public long? AppointmentId { get; set; }
 
-        [Option]
+        [Option(HelpText = "The connector's identifier.")]
         public string ConnectorId { get; set; }
 
-        [Option]
+        [Option(HelpText = "The notification type.")]
         public NotificationType Type { get; set; }
 
-        [Option]
+        [Option(HelpText = "The code.")]
         public string Code { get; set; }
 
-        [Option]
+        [Option(HelpText = "The text.")]
         public string Text { get; set; }
 
-        [Option]
+        [Option(HelpText = "The notification's date.")]
         public DateTime? Date { get; set; }
 
-        [Option]
+        [Option(HelpText = "Optional reference to a job.")]
         public string JobNo { get; set; }
 
-        [Option]
+        [Option(HelpText = "Optional reference to a task.")]
         public string TaskNo { get; set; }
 
-        [Option]
+        [Option(HelpText = "The appointment's GUID.")]
         public Guid? AppointmentGuid { get; set; }
 
-        [Option]
+        [Option(HelpText = "Flag to indicate whether the record is sent from the back office.")]
         public bool SentFromBackOffice { get; set; }
 
         public IImportRequestable ToImport() => (Notification)this;

@@ -7,22 +7,22 @@ namespace Dime.Scheduler.CLI
     [Verb("assignment", HelpText = "Add or remove an assignment.")]
     public class AssignmentOptions : BaseOptions, IImportConvertable
     {
-        [Option(Required = true)]
+        [Option(Required = true, HelpText = "The source app.")]
         public string SourceApp { get; set; }
 
-        [Option(Required = true)]
+        [Option(Required = true, HelpText = "The source type.")]
         public string SourceType { get; set; }
 
-        [Option(Required = true)]
+        [Option(Required = true, HelpText = "The appointment's ID.")]
         public long AppointmentId { get; set; }
 
-        [Option]
+        [Option(HelpText = "The appointment's GUID.")]
         public Guid? AppointmentGuid { get; set; }
 
-        [Option(Required = true)]
+        [Option(Required = true, HelpText = "The resource number.")]
         public string ResourceNo { get; set; }
 
-        [Option]
+        [Option(HelpText = "Flag to indicate whether the record is sent from the back office.")]
         public bool SentFromBackOffice { get; set; } = true;
 
         public IImportRequestable ToImport() => (Assignment)this;

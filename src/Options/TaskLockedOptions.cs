@@ -6,22 +6,22 @@ namespace Dime.Scheduler.CLI
     [Verb("tasklocked", HelpText = "Locks or unlocks a task.")]
     public class TaskLockedOptions : BaseOptions, IImportConvertable
     {
-        [Option]
+        [Option(HelpText = "The source app.")]
         public string SourceApp { get; set; }
 
-        [Option]
+        [Option(HelpText = "The source type.")]
         public string SourceType { get; set; }
 
-        [Option]
+        [Option(HelpText = "The job's unique identifier.")]
         public string JobNo { get; set; }
 
-        [Option]
+        [Option(HelpText = "The task's unique identifier.")]
         public string TaskNo { get; set; }
 
-        [Option]
+        [Option(HelpText = "True to lock the task.")]
         public bool Locked { get; set; }
 
-        [Option]
+        [Option(HelpText = "True to mark the appointment is sent from the back office.")]
         public bool SentFromBackOffice { get; set; } = true;
 
         public IImportRequestable ToImport() => (TaskLocked)this;

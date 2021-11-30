@@ -6,22 +6,22 @@ namespace Dime.Scheduler.CLI
     [Verb("actionuri", HelpText = "Add or remove an action URI.")]
     public class ActionUriOptions : BaseOptions, IImportConvertable
     {
-        [Option]
+        [Option(HelpText = "The source app.")]
         public string SourceApp { get; set; }
 
-        [Option]
+        [Option(HelpText = "The source type.")]
         public string SourceType { get; set; }
 
-        [Option]
+        [Option(HelpText = "The URI type.")]
         public int UriType { get; set; }
 
-        [Option]
+        [Option(HelpText = "The URI.")]
         public string Link { get; set; }
 
-        [Option]
+        [Option(HelpText = "The description of the action URI.")]
         public string Description { get; set; }
 
-        [Option]
+        [Option(HelpText = "Flag to indicate whether this is the default action URI.")]
         public bool Default { get; set; }
 
         public IImportRequestable ToImport() => (ActionUri)this;

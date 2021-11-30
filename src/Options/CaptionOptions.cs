@@ -6,19 +6,19 @@ namespace Dime.Scheduler.CLI
     [Verb("caption", HelpText = "Add or remove a caption.")]
     public class CaptionOptions : BaseOptions, IImportConvertable
     {
-        [Option]
+        [Option(HelpText = "The caption context.")]
         public int Context { get; set; } = 6;
 
-        [Option]
+        [Option(HelpText = "The source table.")]
         public string SourceTable { get; set; }
 
-        [Option]
+        [Option(HelpText = "The field's name.")]
         public string FieldName { get; set; }
 
-        [Option]
+        [Option(HelpText = "The language.")]
         public string Language { get; set; }
 
-        [Option]
+        [Option(HelpText = "The text.")]
         public string Text { get; set; }
 
         public IImportRequestable ToImport() => (Caption)this;

@@ -6,13 +6,13 @@ namespace Dime.Scheduler.CLI
     [Verb("resourceuri", HelpText = "Add or remove a URI to the resource.")]
     public class ResourceUriOptions : BaseOptions, IImportConvertable
     {
-        [Option]
+        [Option(HelpText = "The unique number to describe the resource.")]
         public string ResourceNo { get; set; }
 
-        [Option]
+        [Option(HelpText = "The URI.")]
         public string Link { get; set; }
 
-        [Option]
+        [Option(HelpText = "The description.")]
         public string Description { get; set; }
 
         public IImportRequestable ToImport() => (ResourceUri)this;

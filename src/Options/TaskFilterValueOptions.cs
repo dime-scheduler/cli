@@ -6,25 +6,25 @@ namespace Dime.Scheduler.CLI
     [Verb("taskfiltervalue", HelpText = "Add or remove a filter value to a task.")]
     public class TaskFilterValueOptions : BaseOptions, IImportConvertable
     {
-        [Option]
+        [Option(HelpText = "The source app.")]
         public string SourceApp { get; set; }
 
-        [Option]
+        [Option(HelpText = "The source type.")]
         public string SourceType { get; set; }
 
-        [Option]
+        [Option(HelpText = "The job's unique identifier.")]
         public string JobNo { get; set; }
 
-        [Option]
+        [Option(HelpText = "The task's unique identifier.")]
         public string TaskNo { get; set; }
 
-        [Option]
+        [Option(HelpText = "The filter group name.")]
         public string FilterGroup { get; set; }
 
-        [Option]
+        [Option(HelpText = "The filter group value.")]
         public string FilterValue { get; set; }
 
-        [Option]
+        [Option(HelpText = "True to transfer to temp.")]
         public bool TransferToTemp { get; set; }
 
         public IImportRequestable ToImport() => (TaskFilterValue)this;

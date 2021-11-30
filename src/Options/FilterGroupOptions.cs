@@ -6,16 +6,16 @@ namespace Dime.Scheduler.CLI
     [Verb("filtergroup", HelpText = "Add or remove a filter group.")]
     public class FilterGroupOptions : BaseOptions, IImportConvertable
     {
-        [Option]
+        [Option(HelpText = "The ID.")]
         public int Id { get; set; }
 
-        [Option]
+        [Option(HelpText = "The filter group name.")]
         public string Name { get; set; }
 
-        [Option]
+        [Option(HelpText = "N/A")]
         public int ColumnNo { get; set; }
 
-        [Option]
+        [Option(HelpText = "N/A")]
         public bool DataFilter { get; set; }
 
         public IImportRequestable ToImport() => (FilterGroup)this;

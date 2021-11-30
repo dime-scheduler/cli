@@ -1,29 +1,16 @@
-using System;
 using CommandLine;
 using Dime.Scheduler.Sdk.Import;
 
 namespace Dime.Scheduler.CLI
 {
     [Verb("appointmenturi", HelpText = "Appends an appointment URI.")]
-    public class AppointmentUriOptions : BaseOptions, IImportConvertable
+    public class AppointmentUriOptions : AppointmentAttributeOptions, IImportConvertable
     {
-        [Option]
-        public string SourceApp { get; set; }
-
-        [Option]
-        public string SourceType { get; set; }
-
-        [Option]
-        public long AppointmentId { get; set; }
-
-        [Option]
+        [Option(HelpText = "The URI.")]
         public string Link { get; set; }
 
-        [Option]
+        [Option(HelpText = "The description.")]
         public string Description { get; set; }
-
-        [Option]
-        public Guid? AppointmentGuid { get; set; }
 
         public IImportRequestable ToImport() => (AppointmentUri)this;
 

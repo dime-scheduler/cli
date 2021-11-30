@@ -6,19 +6,15 @@ namespace Dime.Scheduler.CLI
     [Verb("filtervalue", HelpText = "Add or remove a filter value.")]
     public class FilterValueOptions : BaseOptions, IImportConvertable
     {
-        [Option]
+        [Option(HelpText = "The filter group name.")]
         public string Group { get; set; }
 
-        [Option]
+        [Option(HelpText = "The filter value.")]
         public string Value { get; set; }
 
         public IImportRequestable ToImport() => (FilterValue)this;
 
         public static implicit operator FilterValue(FilterValueOptions options)
-          => new()
-          {
-              Group = options.Group,
-              Value = options.Value
-          };
+          => new(options.Group, options.Value);
     }
 }

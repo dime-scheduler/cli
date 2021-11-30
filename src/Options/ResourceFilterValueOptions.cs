@@ -6,22 +6,22 @@ namespace Dime.Scheduler.CLI
     [Verb("resourcefiltervalue", HelpText = "Add or remove a filter value to the resource.")]
     public class ResourceFilterValueOptions : BaseOptions, IImportConvertable
     {
-        [Option]
+        [Option(Required = true, HelpText = "The source app.")]
         public string SourceApp { get; set; }
 
-        [Option]
+        [Option(Required = true, HelpText = "The source type.")]
         public string SourceType { get; set; }
 
-        [Option]
+        [Option(HelpText = "The unique identifier to describe the resource.")]
         public string ResourceNo { get; set; }
 
-        [Option]
+        [Option(HelpText = "The filter group.")]
         public string FilterGroup { get; set; }
 
-        [Option]
+        [Option(HelpText = "The filter value.")]
         public string FilterValue { get; set; }
 
-        [Option]
+        [Option(HelpText = "N/A")]
         public bool TransferToTemp { get; set; }
 
         public IImportRequestable ToImport() => (ResourceFilterValue)this;

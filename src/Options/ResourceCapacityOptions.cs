@@ -7,22 +7,22 @@ namespace Dime.Scheduler.CLI
     [Verb("resourcecapacity", HelpText = "Allocates capacity to the resource.")]
     public class ResourceCapacityOptions : BaseOptions, IImportConvertable
     {
-        [Option]
+        [Option(HelpText = "The unique identifier to describe the resource.")]
         public string ResourceNo { get; set; }
 
-        [Option]
+        [Option(HelpText = "The capacity entry's date.")]
         public DateTime Date  { get; set; }
 
-        [Option]
+        [Option(HelpText = "The capacity entry in seconds.")]
         public long? CapacityInSeconds { get; set; }
 
-        [Option]
+        [Option(HelpText = "The entry.")]
         public decimal? Quantity { get; set; }
 
-        [Option]
+        [Option(HelpText = "The unit of measure.")]
         public string UnitOfMeasure { get; set; }  
 
-        [Option]
+        [Option(HelpText = "The conversion rate.")]
         public decimal? UnitOfMeasureConversion { get; set; }
 
         public IImportRequestable ToImport() => (ResourceCapacity)this;

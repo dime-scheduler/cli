@@ -7,19 +7,19 @@ namespace Dime.Scheduler.CLI
     [Verb("resourcecalendar", HelpText = "Assigns a calendar to the resource.")]
     public class ResourceCalendarOptions : BaseOptions, IImportConvertable
     {
-        [Option]
+        [Option(HelpText = "The resource calendar code.")]
         public string Code { get; set; }
 
-        [Option]
+        [Option(HelpText = "The unique identifier to describe the resource.")]
         public string ResourceNo { get; set; }
 
-        [Option]
+        [Option(HelpText = "The unique identifier to describe the calendar.")]
         public string CalendarCode { get; set; }
 
-        [Option]
+        [Option(HelpText = "The start date.")]
         public DateTime StartDate { get; set; }
 
-        [Option]
+        [Option(HelpText = "The end date.")]
         public DateTime EndDate { get; set; }
 
         public IImportRequestable ToImport() => (ResourceCalendar)this;

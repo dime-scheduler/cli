@@ -1,29 +1,13 @@
-using System;
 using CommandLine;
 using Dime.Scheduler.Sdk.Import;
 
 namespace Dime.Scheduler.CLI
 {
     [Verb("appointmentimportance", HelpText = "Sets the appointment's priority.")]
-    public class AppointmentImportanceOptions : BaseOptions, IImportConvertable
+    public class AppointmentImportanceOptions : AppointmentAttributeOptions, IImportConvertable
     {
-        [Option]
-        public string SourceApp { get; set; }
-
-        [Option]
-        public string SourceType { get; set; }
-
-        [Option]
-        public long AppointmentId { get; set; }
-
-        [Option]
+        [Option(HelpText = "The appointment's priority.")]
         public int Importance { get; set; }
-
-        [Option]
-        public Guid? AppointmentGuid { get; set; }
-
-        [Option]
-        public bool SentFromBackOffice { get; set; }
 
         public IImportRequestable ToImport() => (AppointmentImportance)this;
 

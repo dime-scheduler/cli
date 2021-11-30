@@ -7,253 +7,253 @@ namespace Dime.Scheduler.CLI
     [Verb("resource", HelpText = "Add or remove a resource.")]
     public class ResourceOptions : BaseOptions, IImportConvertable
     {
-        [Option(Required = true)]
+        [Option(Required = true, HelpText = "The unique identifier to describe the resource.")]
         public string ResourceNo { get; set; }
 
-        [Option]
+        [Option(Required = true, HelpText = "The source app.")]
         public string SourceApp { get; set; }
 
-        [Option]
+        [Option(Required = true, HelpText = "The source type.")]
         public string SourceType { get; set; }
 
-        [Option]
+        [Option(HelpText = "The resource type.")]
         public string ResourceType { get; set; }
 
-        [Option]
+        [Option(HelpText = "The resource type's identifier.")]
         public int? ResourceTypeId { get; set; }
 
-        [Option]
+        [Option(HelpText = "The resource's name.")]
         public string ResourceName { get; set; }
 
-        [Option]
+        [Option(HelpText = "The resource's display name.")]
         public string DisplayName { get; set; }
 
-        [Option]
+        [Option(HelpText = "The resource's department.")]
         public string Department { get; set; }
 
-        [Option]
+        [Option(HelpText = "The e-mail address.")]
         public string Email { get; set; }
 
-        [Option]
+        [Option(HelpText = "The phone number.")]
         public string Phone { get; set; }
 
-        [Option]
+        [Option(HelpText = "The mobile phone.")]
         public string MobilePhone { get; set; }
 
-        [Option]
+        [Option(HelpText = "True to mark it as a replacement resource.")]
         public bool ReplacementResource { get; set; }
 
-        [Option]
+        [Option(HelpText = "The field service mail.")]
         public string FieldServiceEmail { get; set; }
 
-        [Option]
+        [Option(HelpText = "The personal email address.")]
         public string PersonalEmail { get; set; }
 
-        [Option]
+        [Option(HelpText = "The tracking number.")]
         public string GpsTrackingResourceNo { get; set; }
 
-        [Option]
+        [Option(HelpText = "The home address.")]
         public string HomeAddress { get; set; }
 
-        [Option]
+        [Option(HelpText = "The home address longitude.")]
         public float? HomeAddressGeoLong { get; set; }
 
-        [Option]
+        [Option(HelpText = "The home address latitude.")]
         public float? HomeAddressGeoLat { get; set; }
 
-        [Option]
+        [Option(HelpText = "The home phone.")]
         public string HomePhone { get; set; }
 
-        [Option]
+        [Option(HelpText = "The home mail.")]
         public string HomeEmail { get; set; }
 
-        [Option]
+        [Option(HelpText = "The home street.")]
         public string HomeStreet { get; set; }
 
-        [Option]
+        [Option(HelpText = "The home street number.")]
         public string HomeStreetNo { get; set; }
 
-        [Option]
+        [Option(HelpText = "The home post code.")]
         public string HomePostcode { get; set; }
 
-        [Option]
+        [Option(HelpText = "The home city.")]
         public string HomeCity { get; set; }
 
-        [Option]
+        [Option(HelpText = "The home county.")]
         public string HomeCounty { get; set; }
 
-        [Option]
+        [Option(HelpText = "The home state.")]
         public string HomeState { get; set; }
 
-        [Option]
+        [Option(HelpText = "The home country")]
         public string HomeCountry { get; set; }
 
-        [Option]
+        [Option(HelpText = "The home region.")]
         public string HomeRegion { get; set; }
 
-        [Option]
+        [Option(HelpText = "The team code.")]
         public string TeamCode { get; set; }
 
-        [Option]
+        [Option(HelpText = "The team name.")]
         public string TeamName { get; set; }
 
-        [Option]
+        [Option(HelpText = "The team type.")]
         public string TeamType { get; set; }
 
-        [Option]
+        [Option(HelpText = "The team sort.")]
         public int TeamSort { get; set; }
 
-        [Option]
+        [Option(HelpText = "The team member type.")]
         public string TeamMemberType { get; set; }
 
-        [Option]
+        [Option(HelpText = "The team member sort.")]
         public int TeamMemberSort { get; set; }
 
-        [Option]
+        [Option(HelpText = "True to hide the resource.")]
         public bool DoNotShow { get; set; }
 
-        [Option]
+        [Option(HelpText = "The service from date")]
         public DateTime? InServiceFrom { get; set; }
 
-        [Option]
+        [Option(HelpText = "The service until date")]
         public DateTime? InServiceTill { get; set; }
 
-        [Option]
+        [Option(HelpText = "True to enable Exchange integration.")]
         public bool ExchangeIntegrationEnabled { get; set; }
 
-        [Option]
+        [Option(HelpText = "The URI.")]
         public string Url1 { get; set; }
 
-        [Option]
+        [Option(HelpText = "The URI description.")]
         public string UrlDescription1 { get; set; }
 
-        [Option]
+        [Option(HelpText = "The URI.")]
         public string Url2 { get; set; }
 
-        [Option]
+        [Option(HelpText = "The URI description.")]
         public string UrlDescription2 { get; set; }
 
-        [Option]
+        [Option(HelpText = "The URI.")]
         public string Url3 { get; set; }
 
-        [Option]
+        [Option(HelpText = "The URI description.")]
         public string UrlDescription3 { get; set; }
 
-        [Option]
+        [Option(HelpText = "True to plan in bulk.")]
         public bool BulkPlanning { get; set; }
 
-        [Option]
+        [Option(HelpText = "The bulk capacity.")]
         public decimal BulkCapacity { get; set; }
 
-        [Option]
+        [Option(HelpText = "True to enable GPS tracking.")]
         public bool ResourceGpsTrackingEnabled { get; set; }
 
-        [Option]
+        [Option(HelpText = "The pin's unique identifier.")]
         public string Pin { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free text field.")]
         public string FreeText1 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free text field.")]
         public string FreeText2 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free text field.")]
         public string FreeText3 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free text field.")]
         public string FreeText4 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free text field.")]
         public string FreeText5 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free text field.")]
         public string FreeText6 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free text field.")]
         public string FreeText7 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free text field.")]
         public string FreeText8 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free text field.")]
         public string FreeText9 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free text field.")]
         public string FreeText10 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free text field.")]
         public string FreeText11 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free text field.")]
         public string FreeText12 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free text field.")]
         public string FreeText13 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free text field.")]
         public string FreeText14 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free text field.")]
         public string FreeText15 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free text field.")]
         public string FreeText16 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free text field.")]
         public string FreeText17 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free text field.")]
         public string FreeText18 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free text field.")]
         public string FreeText19 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free text field.")]
         public string FreeText20 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free decimal field.")]
         public decimal FreeDecimal1 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free decimal field.")]
         public decimal FreeDecimal2 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free decimal field.")]
         public decimal FreeDecimal3 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free decimal field.")]
         public decimal FreeDecimal4 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free decimal field.")]
         public decimal FreeDecimal5 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free date field.")]
         public DateTime? FreeDate1 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free date field.")]
         public DateTime? FreeDate2 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free date field.")]
         public DateTime? FreeDate3 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free date field.")]
         public DateTime? FreeDate4 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free date field.")]
         public DateTime? FreeDate5 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free boolean field.")]
         public bool FreeBit1 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free boolean field.")]
         public bool FreeBit2 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free boolean field.")]
         public bool FreeBit3 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free boolean field.")]
         public bool FreeBit4 { get; set; }
 
-        [Option]
+        [Option(HelpText = "A free boolean field.")]
         public bool FreeBit5 { get; set; }
 
         public IImportRequestable ToImport() => (Resource)this;
