@@ -22,7 +22,7 @@ namespace Dime.Scheduler.CLI
         [Option]
         public TaskType TaskType { get; set; }
 
-        [Option]
+        [Option(Required = true)]
         public string ShortDescription { get; set; }
 
         [Option]
