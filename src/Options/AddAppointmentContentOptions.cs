@@ -1,10 +1,11 @@
 using System;
 using CommandLine;
+using Dime.Scheduler.Sdk.Import;
 
 namespace Dime.Scheduler.CLI
 {
-    [Verb("addAppointmentContent", HelpText = "Updates a part of the appointment.")]
-    public class AddAppointmentContentOptions : BaseOptions
+    [Verb("addAppointmentContent", HelpText = "Sets the appointment's body and subject.")]
+    public class AddAppointmentContentOptions : BaseOptions, IImportConvertable
     {
         [Option]
         public string SourceApp { get; set; }
@@ -26,5 +27,19 @@ namespace Dime.Scheduler.CLI
 
         [Option]
         public bool SentFromBackOffice { get; set; }
+
+        public IImportRequestable ToImport() => (AppointmentContent)this;
+
+        public static implicit operator AppointmentContent(AddAppointmentContentOptions options)
+            => new()
+            {
+                AppointmentGuid = options.AppointmentGuid,
+                AppointmentId = options.AppointmentId,
+                Subject = options.Subject,
+                Body = options.Body,
+                SentFromBackOffice = options.SentFromBackOffice,
+                SourceApp = options.SourceApp,
+                SourceType = options.SourceType
+            };
     }
 }

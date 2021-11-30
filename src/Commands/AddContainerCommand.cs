@@ -1,36 +1,12 @@
-﻿using System;
-using Dime.Scheduler.Sdk;
-using Dime.Scheduler.Sdk.Import;
-using Task = System.Threading.Tasks.Task;
+﻿using Dime.Scheduler.Sdk.Import;
 
 namespace Dime.Scheduler.CLI.Commands
 {
-    public class AddContainerCommand : ICommand<AddContainerOptions>
+    public class AddContainerCommand :
+        ImportCommand<AddContainerOptions, Container>,
+        ICommand<AddContainerOptions>
     {
-        public async Task ProcessAsync(AddContainerOptions options)
-        {
-            try
-            {
-                Console.WriteLine("Adding container");
-
-                IAuthenticator authenticator = new FormsAuthenticator(options.Uri, options.User, options.Password);
-                DimeSchedulerClient client = new(options.Uri, authenticator);
-
-                IImportEndpoint endpoint = await client.Import.Request();
-
-                Container container = new()
-                {
-                    HandleDate = options.HandleDate,
-                    HandleLocked = options.HandleLocked,
-                    Name = options.Name
-                };
-
-                await endpoint.ProcessAsync(container, TransactionType.Append);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Exception occurred: " + ex.Message);
-            }
-        }
+        protected override string WriteIntro(AddContainerOptions options)
+            => "Adding container";
     }
 }

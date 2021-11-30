@@ -1,10 +1,11 @@
 using System;
 using CommandLine;
+using Dime.Scheduler.Sdk.Import;
 
 namespace Dime.Scheduler.CLI
 {
-    [Verb("addAppointmentCategory", HelpText = "Updates a part of the appointment.")]
-    public class AddAppointmentCategoryOptions : BaseOptions
+    [Verb("addAppointmentCategory", HelpText = "Sets the appointment's category.")]
+    public class AddAppointmentCategoryOptions : BaseOptions, IImportConvertable
     {
         [Option]
         public string SourceApp { get; set; }
@@ -23,5 +24,18 @@ namespace Dime.Scheduler.CLI
 
         [Option]
         public bool SentFromBackOffice { get; set; }
+
+        public IImportRequestable ToImport() => (AppointmentCategory)this;
+
+        public static implicit operator AppointmentCategory(AddAppointmentCategoryOptions options)
+           => new()
+           {
+               AppointmentGuid = options.AppointmentGuid,
+               AppointmentId = options.AppointmentId,
+               Category = options.Category,
+               SentFromBackOffice = options.SentFromBackOffice,
+               SourceApp = options.SourceApp,
+               SourceType = options.SourceType
+           };
     }
 }

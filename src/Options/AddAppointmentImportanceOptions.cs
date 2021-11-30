@@ -1,10 +1,11 @@
 using System;
 using CommandLine;
+using Dime.Scheduler.Sdk.Import;
 
 namespace Dime.Scheduler.CLI
 {
-    [Verb("addAppointmentImportance", HelpText = "Updates a part of the appointment.")]
-    public class AddAppointmentImportanceOptions : BaseOptions
+    [Verb("addAppointmentImportance", HelpText = "Sets the appointment's priority.")]
+    public class AddAppointmentImportanceOptions : BaseOptions, IImportConvertable
     {
         [Option]
         public string SourceApp { get; set; }
@@ -23,5 +24,18 @@ namespace Dime.Scheduler.CLI
 
         [Option]
         public bool SentFromBackOffice { get; set; }
+
+        public IImportRequestable ToImport() => (AppointmentImportance)this;
+
+        public static implicit operator AppointmentImportance(AddAppointmentImportanceOptions options)
+            => new()
+            {
+                AppointmentGuid = options.AppointmentGuid,
+                AppointmentId = options.AppointmentId,
+                Importance = options.Importance,
+                SentFromBackOffice = options.SentFromBackOffice,
+                SourceApp = options.SourceApp,
+                SourceType = options.SourceType
+            };
     }
 }

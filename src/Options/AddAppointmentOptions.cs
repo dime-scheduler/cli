@@ -1,10 +1,11 @@
 ﻿using System;
 using CommandLine;
+using Dime.Scheduler.Sdk.Import;
 
 namespace Dime.Scheduler.CLI
 {
     [Verb("addAppointment", HelpText = "Adds an appointment to the planning board.")]
-    public class AddAppointmentOptions : BaseOptions
+    public class AddAppointmentOptions : BaseOptions, IImportConvertable
     {
         [Option("sourceapp", Required = true)]
         public string SourceApp { get; set; }
@@ -62,5 +63,31 @@ namespace Dime.Scheduler.CLI
 
         [Option("sentfrombackoffice")]
         public bool SentFromBackOffice { get; set; }
+
+        public IImportRequestable ToImport() => (Appointment)this;
+
+        public static implicit operator Appointment(AddAppointmentOptions options)
+            => new()
+            {
+                ResourceNo = options.ResourceNo,
+                Start = options.Start,
+                End = options.End,
+                SourceApp = options.SourceApp,
+                SourceType = options.SourceType,
+                TaskNo = options.TaskNo,
+                JobNo = options.JobNo,
+                Subject = options.Subject,
+                Body = options.Body,
+                Category = options.Category,
+                TimeMarker = options.TimeMarker,
+                Importance = options.Importance,
+                Locked = options.Locked,
+                SentFromBackOffice = options.SentFromBackOffice,
+                PlanningQuantity = options.PlanningQuantity,
+                UnitOfMeasure = options.UnitOfMeasure,
+                UnitOfMeasureConversion = options.UnitOfMeasureConversion,
+                RoundToUnitOfMeasure = options.RoundToUnitOfMeasure,
+                UseFixedPlanningQuantity = options.UseFixedPlanningQuantity
+            };
     }
 }
