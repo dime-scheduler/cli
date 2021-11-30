@@ -3,7 +3,7 @@ using Dime.Scheduler.Sdk.Import;
 
 namespace Dime.Scheduler.CLI
 {
-    [Verb("addResourceUri", HelpText = "Updates a part of the resource.")]
+    [Verb("addResourceUri", HelpText = "Adds a URI to the resource.")]
     public class AddResourceUriOptions : BaseOptions, IImportConvertable
     {
         [Option]

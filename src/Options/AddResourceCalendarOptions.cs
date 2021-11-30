@@ -4,7 +4,7 @@ using Dime.Scheduler.Sdk.Import;
 
 namespace Dime.Scheduler.CLI
 {
-    [Verb("addResourceCalendar", HelpText = "Updates a part of the resource.")]
+    [Verb("addResourceCalendar", HelpText = "Assigns a calendar to the resource.")]
     public class AddResourceCalendarOptions : BaseOptions, IImportConvertable
     {
         [Option]

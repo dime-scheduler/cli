@@ -4,7 +4,7 @@ using Dime.Scheduler.Sdk.Import;
 
 namespace Dime.Scheduler.CLI
 {
-    [Verb("addResourceCapacity", HelpText = "Updates a part of the resource.")]
+    [Verb("addResourceCapacity", HelpText = "Allocates capacity to the resource.")]
     public class AddResourceCapacityOptions : BaseOptions, IImportConvertable
     {
         [Option]

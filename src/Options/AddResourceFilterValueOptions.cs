@@ -3,7 +3,7 @@ using Dime.Scheduler.Sdk.Import;
 
 namespace Dime.Scheduler.CLI
 {
-    [Verb("addResourceFilterValue", HelpText = "Updates a part of the resource.")]
+    [Verb("addResourceFilterValue", HelpText = "Adds a filter value to the resource.")]
     public class AddResourceFilterValueOptions : BaseOptions, IImportConvertable
     {
         [Option]
