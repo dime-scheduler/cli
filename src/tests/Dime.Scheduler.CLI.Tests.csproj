@@ -22,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\src\cli\Dime.Scheduler.CLI.csproj" />
+    <ProjectReference Include="..\cli\Dime.Scheduler.CLI.csproj" />
   </ItemGroup>
 
 </Project>

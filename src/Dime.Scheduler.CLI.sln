@@ -5,7 +5,7 @@ VisualStudioVersion = 17.1.31911.260
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dime.Scheduler.CLI", "cli\Dime.Scheduler.CLI.csproj", "{08B64398-BDB7-4491-818B-EBEF8617E7CB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dime.Scheduler.CLI.Tests", "..\Dime.Scheduler.CLI.Tests\Dime.Scheduler.CLI.Tests.csproj", "{D67CBA77-7DF7-4044-B768-EC668A0B787F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dime.Scheduler.CLI.Tests", "tests\Dime.Scheduler.CLI.Tests.csproj", "{D67CBA77-7DF7-4044-B768-EC668A0B787F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
