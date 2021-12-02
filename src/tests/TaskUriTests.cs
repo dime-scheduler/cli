@@ -7,6 +7,8 @@ namespace Dime.Scheduler.CLI.Tests
         [Fact]
         public void Mapping_TaskUri_TestProperties()
         {
+            Options.TaskUriOptions options = new();
+            options.AssertEqualProperties((Sdk.Import.TaskUri)options);
         }
     }
 }

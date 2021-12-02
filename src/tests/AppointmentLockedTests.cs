@@ -7,6 +7,8 @@ namespace Dime.Scheduler.CLI.Tests
         [Fact]
         public void Mapping_AppointmentLocked_TestProperties()
         {
+            Options.AppointmentLockedOptions options = new();
+            options.AssertEqualProperties((Sdk.Import.AppointmentLocked)options);
         }
     }
 }

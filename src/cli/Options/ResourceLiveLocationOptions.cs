@@ -11,10 +11,10 @@ namespace Dime.Scheduler.CLI.Options
         public string ResourceNo { get; set; }
 
         [Option('x', "latitude", Required = true, HelpText = "The latitude.")]
-        public string Latitude { get; set; }
+        public decimal Latitude { get; set; }
 
         [Option('y', "longitude", Required = true, HelpText = "The longitude.")]
-        public string Longitude { get; set; }
+        public decimal Longitude { get; set; }
 
         public IImportRequestable ToImport() => (ResourceGpsTracking)this;
 
@@ -22,8 +22,8 @@ namespace Dime.Scheduler.CLI.Options
           => new()
           {
               ResourceNo = options.ResourceNo,
-              Latitude = decimal.Parse(options.Latitude, CultureInfo.InvariantCulture),
-              Longitude = decimal.Parse(options.Longitude, CultureInfo.InvariantCulture)
+              Latitude = options.Latitude,
+              Longitude = options.Longitude
           };
     }
 }

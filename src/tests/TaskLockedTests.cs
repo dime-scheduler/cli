@@ -7,6 +7,8 @@ namespace Dime.Scheduler.CLI.Tests
         [Fact]
         public void Mapping_TaskLocked_TestProperties()
         {
+            Options.TaskLockedOptions options = new();
+            options.AssertEqualProperties((Sdk.Import.TaskLocked)options);
         }
     }
 }

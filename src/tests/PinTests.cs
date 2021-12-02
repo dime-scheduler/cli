@@ -7,6 +7,8 @@ namespace Dime.Scheduler.CLI.Tests
         [Fact]
         public void Mapping_Pin_TestProperties()
         {
+            Options.PinOptions options = new();
+            options.AssertEqualProperties((Sdk.Import.Pin)options);
         }
     }
 }

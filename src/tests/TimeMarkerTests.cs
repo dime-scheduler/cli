@@ -7,6 +7,8 @@ namespace Dime.Scheduler.CLI.Tests
         [Fact]
         public void Mapping_TimeMarker_TestProperties()
         {
+            Options.TimeMarkerOptions options = new();
+            options.AssertEqualProperties((Sdk.Import.TimeMarker)options);
         }
     }
 }

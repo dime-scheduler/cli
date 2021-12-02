@@ -7,6 +7,8 @@ namespace Dime.Scheduler.CLI.Tests
         [Fact]
         public void Mapping_FilterValue_TestProperties()
         {
+            Options.FilterValueOptions options = new();
+            options.AssertEqualProperties((Sdk.Import.FilterValue)options);
         }
     }
 }
