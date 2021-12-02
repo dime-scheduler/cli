@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-<img src="https://img.shields.io/azure-devops/build/dimesoftware/utilities/190?style=flat-square" /> 
+<img src="https://img.shields.io/azure-devops/build/dimesoftware/Dime.Scheduler%20V2/203?style=flat-square" /> 
 <img src="https://img.shields.io/nuget/vpre/Dime.Scheduler.CLI?style=flat-square" />
 <a href="https://codeclimate.com/github/dime-scheduler/ds-cli/maintainability"><img src="https://api.codeclimate.com/v1/badges/68140b51ba67c1fbf36e/maintainability" /></a> 
  <a href="https://github.com/dime-scheduler/ds-cli/discussions">
