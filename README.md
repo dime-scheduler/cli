@@ -3,8 +3,9 @@
 </p>
 
 <p align="center">
-<img src="https://img.shields.io/azure-devops/build/dimesoftware/Dime.Scheduler%20V2/203?style=flat-square" /> 
 <img src="https://img.shields.io/nuget/vpre/Dime.Scheduler.CLI?style=flat-square" />
+<img src="https://img.shields.io/azure-devops/build/dimesoftware/Dime%20Software/204?style=flat-square" /> 
+<img src="https://img.shields.io/azure-devops/coverage/dimesoftware/Dime%20Software/204">
 <a href="https://codeclimate.com/github/dime-scheduler/ds-cli/maintainability"><img src="https://api.codeclimate.com/v1/badges/68140b51ba67c1fbf36e/maintainability" /></a> 
  <a href="https://github.com/dime-scheduler/ds-cli/discussions">
   <img src="https://img.shields.io/badge/chat-discussions-brightgreen?style=flat-square"> <img src="https://img.shields.io/badge/License-MIT-brightgreen.svg?style=flat-square"/> <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" />
