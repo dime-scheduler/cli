@@ -1,7 +1,6 @@
 using Dime.Scheduler.CLI.Options;
 using Dime.Scheduler.Sdk.Import;
 using System;
-using System.Linq;
 using Xunit;
 
 namespace Dime.Scheduler.CLI.Tests
@@ -9,7 +8,7 @@ namespace Dime.Scheduler.CLI.Tests
     public class JobTests
     {
         [Fact]
-        public void Mapping_Job_TestStringProperties()
+        public void Mapping_Job_TestProperties()
         {
             JobOptions options = new()
             {
@@ -132,21 +131,7 @@ namespace Dime.Scheduler.CLI.Tests
                 User = "TEST"
             };
 
-            ((Job)options).AssertStringProperties();
-        }
-    }
-
-    internal static class MappingExtensions
-    {
-        internal static void AssertStringProperties(this object opts)
-        {
-
-            bool hasNoEmptyValues = opts
-                .GetType()
-                .GetProperties()
-                .All(p => p.GetValue(opts) != null);
-
-            Assert.True(hasNoEmptyValues);
+            options.AssertEqualProperties((Job)options);
         }
     }
 }
