@@ -18,7 +18,7 @@ namespace Dime.Scheduler.CLI.Options
         [Option(Required = true, HelpText = "The task's unique identifier.")]
         public string TaskNo { get; set; }
 
-        [Option(Required = true, HelpText = "The containre's unique identifier.")]
+        [Option(Required = true, HelpText = "The container's unique identifier.")]
         public string Name { get; set; }
 
         [Option(HelpText = "The index.")]
