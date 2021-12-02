@@ -6,14 +6,14 @@ namespace Dime.Scheduler.CLI.Options
     [Verb("user", HelpText = "Add or remove a user.")]
     public class UserOptions : BaseOptions
     {
-        [Option(HelpText = "The user's e-mail address.")]
+        [Option(Required = true, HelpText = "The user's e-mail address.")]
         public string Email { get; set; }
 
-        [Option(HelpText = "The user's password.")]
+        [Option(Required = true, HelpText = "The user's password.")]
         public string Key { get; set; }
 
-        [Option(HelpText = "The user type.")]
-        public LoginType Type { get; set; }
+        [Option(HelpText = "The user type.", Default = LoginType.Forms)]
+        public LoginType Type { get; set; } = LoginType.Forms;
 
         [Option(HelpText = "The user's language.")]
         public string Language { get; set; }
