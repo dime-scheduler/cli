@@ -8,6 +8,12 @@ variables:
   BuildPlatform: "Any CPU"
 
 steps:
+  - task: UseDotNet@2
+    inputs:
+      packageType: 'sdk'
+      version: '6.x'
+      includePreviewVersions: true
+      
   - task: DotNetCoreCLI@2
     displayName: "Restore"
     inputs:
