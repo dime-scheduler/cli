@@ -18,10 +18,10 @@ namespace Dime.Scheduler.CLI.Options
         [Option(Required = true, HelpText = "The task's unique identifier.")]
         public string TaskNo { get; set; }
 
-        [Option(Required = true, HelpText = "The task container name")]
+        [Option(Required = true, HelpText = "The containre's unique identifier.")]
         public string Name { get; set; }
 
-        [Option(HelpText = "The index")]
+        [Option(HelpText = "The index.")]
         public int Index { get; set; }
 
         public IImportRequestable ToImport() => (TaskContainer)this;
