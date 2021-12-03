@@ -62,7 +62,7 @@ namespace Dime.Scheduler.CLI.Options
         public bool RoundToUnitOfMeasure { get; set; }
 
         [Option(HelpText = "Flag to indicate whether the record is sent from the back office.")]
-        public bool SentFromBackOffice { get; set; }
+        public bool SentFromBackOffice { get; set; } = true;
 
         public IImportRequestable ToImport() => (Appointment)this;
 
