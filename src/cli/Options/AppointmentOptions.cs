@@ -44,25 +44,25 @@ namespace Dime.Scheduler.CLI.Options
         public int Importance { get; set; }
 
         [Option(HelpText = "Set to true to lock the appointment.")]
-        public bool Locked { get; set; }
+        public bool? Locked { get; set; }
 
         [Option(HelpText = "The unit of measure.")]
         public string UnitOfMeasure { get; set; }
 
         [Option(HelpText = "The conversion rate for the unit of measure.")]
-        public decimal UnitOfMeasureConversion { get; set; }
+        public decimal? UnitOfMeasureConversion { get; set; }
 
         [Option(HelpText = "Set to true to use fixed planning quantity.")]
-        public bool UseFixedPlanningQuantity { get; set; }
+        public bool? UseFixedPlanningQuantity { get; set; }
 
         [Option(HelpText = "The appointment's planning quantity.")]
-        public decimal PlanningQuantity { get; set; }
+        public decimal? PlanningQuantity { get; set; }
 
         [Option(HelpText = "Flag to indicate whether to round up the unit of measure.")]
-        public bool RoundToUnitOfMeasure { get; set; }
+        public bool? RoundToUnitOfMeasure { get; set; }
 
         [Option(HelpText = "Flag to indicate whether the record is sent from the back office.")]
-        public bool SentFromBackOffice { get; set; } = true;
+        public bool? SentFromBackOffice { get; set; } = true;
 
         public IImportRequestable ToImport() => (Appointment)this;
 
