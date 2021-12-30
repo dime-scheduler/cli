@@ -7,7 +7,7 @@ namespace Dime.Scheduler.CLI.Tests
 {
     internal static class MappingExtensions
     {
-        internal static void AssertEqualProperties(this object source, object target, string[] propertiesToIgnore = null)
+        internal static void AssertEqualProperties(this object source, object target, string[]? propertiesToIgnore = null)
         {
             foreach (PropertyInfo? sourceProperty in source.GetType().GetProperties())
             {

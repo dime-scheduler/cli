@@ -20,7 +20,7 @@ namespace Dime.Scheduler.CLI.Commands
 
                 MessageRequest message = new()
                 {
-                    Severity = (Severity)options.Severity,
+                    Severity = options.Severity,
                     Text = options.Text,
                     User = options.To
                 };
