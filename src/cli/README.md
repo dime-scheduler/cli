@@ -5,7 +5,7 @@ Connect with Dime.Scheduler through the CLI..
 ## Installation
 
 ```cmd
-dotnet tool install Dime.Scheduler.CLI --global --version 0.0.1-alpha.4
+dotnet tool install Dime.Scheduler.CLI --global --version 1.0.0-beta.7
 ```
 
 ## Usage
@@ -13,7 +13,8 @@ dotnet tool install Dime.Scheduler.CLI --global --version 0.0.1-alpha.4
 The following example adds or updates a category in Dime.Scheduler:
 
 ```cmd
-dimescheduler addCategory
+dimescheduler category
+-a
 -u https://mydimescheduler.io
 -c myadministrator@mydimescheduler.com
 -p mystrongpassword
