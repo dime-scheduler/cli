@@ -1,6 +1,5 @@
 ﻿using CommandLine;
 using Dime.Scheduler.Sdk.Import;
-using System.Globalization;
 
 namespace Dime.Scheduler.CLI.Options
 {

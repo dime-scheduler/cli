@@ -7,7 +7,6 @@ namespace Dime.Scheduler.CLI.Tests
         [Fact]
         public void Mapping_Assignment_TestProperties()
         {
-
             Options.AssignmentOptions options = new();
             options.AssertEqualProperties((Sdk.Import.Assignment)options);
         }

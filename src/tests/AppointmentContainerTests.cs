@@ -13,11 +13,11 @@ namespace Dime.Scheduler.CLI.Tests
             {
                 Append = true,
                 User = "Hello world",
-                Uri = "Hello world",            
-                Password = "Hello world",                
+                Uri = "Hello world",
+                Password = "Hello world",
                 Container = "Hello world",
                 Delete = true,
-                Appointment = "15"               
+                Appointment = "15"
             };
 
             options.AssertEqualProperties((AppointmentContainer)options);

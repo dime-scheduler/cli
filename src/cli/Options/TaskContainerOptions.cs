@@ -34,7 +34,7 @@ namespace Dime.Scheduler.CLI.Options
               Name = options.Name,
               SourceApp = options.SourceApp,
               SourceType = options.SourceType,
-              TaskNo = options.TaskNo             
+              TaskNo = options.TaskNo
           };
     }
 }

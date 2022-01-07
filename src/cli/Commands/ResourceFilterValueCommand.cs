@@ -7,7 +7,7 @@ namespace Dime.Scheduler.CLI.Commands
         ImportCommand<ResourceFilterValueOptions, ResourceFilterValue>,
         ICommand<ResourceFilterValueOptions>
     {
-        protected override string WriteIntro(ResourceFilterValueOptions options) 
+        protected override string WriteIntro(ResourceFilterValueOptions options)
             => "Creates a resource filter value.";
     }
 }

@@ -9,7 +9,6 @@ namespace Dime.Scheduler.CLI.Tests
         {
             Options.TaskOptions options = new();
             options.AssertEqualProperties((Sdk.Import.Task)options);
-
         }
     }
 }

@@ -4,7 +4,7 @@ using Dime.Scheduler.Sdk.Import;
 namespace Dime.Scheduler.CLI.Commands
 {
     public class AppointmentCategoryCommand :
-        ImportCommand<AppointmentCategoryOptions, AppointmentCategory>, 
+        ImportCommand<AppointmentCategoryOptions, AppointmentCategory>,
         ICommand<AppointmentCategoryOptions>
     {
         protected override string WriteIntro(AppointmentCategoryOptions options)

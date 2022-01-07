@@ -3,7 +3,7 @@ using Dime.Scheduler.Sdk.Import;
 
 namespace Dime.Scheduler.CLI.Commands
 {
-    public class AppointmentContentCommand : 
+    public class AppointmentContentCommand :
         ImportCommand<AppointmentContentOptions, AppointmentContent>,
         ICommand<AppointmentContentOptions>
     {

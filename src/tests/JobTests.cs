@@ -1,6 +1,6 @@
+using System;
 using Dime.Scheduler.CLI.Options;
 using Dime.Scheduler.Sdk.Import;
-using System;
 using Xunit;
 
 namespace Dime.Scheduler.CLI.Tests

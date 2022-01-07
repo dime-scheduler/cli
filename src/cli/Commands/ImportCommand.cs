@@ -29,7 +29,7 @@ namespace Dime.Scheduler.CLI.Commands
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Exception occurred: " + ex.Message);
+                Console.WriteLine(ex.Message);
             }
         }
     }

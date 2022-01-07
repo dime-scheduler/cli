@@ -7,7 +7,6 @@ namespace Dime.Scheduler.CLI.Tests
         [Fact]
         public void Mapping_AppointmentUri_TestProperties()
         {
-
             Options.AppointmentUriOptions options = new();
             options.AssertEqualProperties((Sdk.Import.AppointmentUri)options);
         }
