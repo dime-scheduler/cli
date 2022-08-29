@@ -56,10 +56,10 @@ namespace Dime.Scheduler.CLI.Options
         public string HomeAddress { get; set; }
 
         [Option(HelpText = "The home address longitude.")]
-        public float? HomeAddressGeoLong { get; set; }
+        public decimal? HomeAddressGeoLong { get; set; }
 
         [Option(HelpText = "The home address latitude.")]
-        public float? HomeAddressGeoLat { get; set; }
+        public decimal? HomeAddressGeoLat { get; set; }
 
         [Option(HelpText = "The home phone.")]
         public string HomePhone { get; set; }

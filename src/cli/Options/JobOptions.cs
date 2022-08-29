@@ -47,10 +47,10 @@ namespace Dime.Scheduler.CLI.Options
         public string CustomerAddress { get; set; }
 
         [Option(HelpText = "The customer's longitude.")]
-        public decimal CustomerAddressGeoLong { get; set; }
+        public decimal? CustomerAddressGeoLong { get; set; }
 
         [Option(HelpText = "The customer's latitude.")]
-        public decimal CustomerAddressGeoLat { get; set; }
+        public decimal? CustomerAddressGeoLat { get; set; }
 
         [Option(HelpText = "The customer's phone number.")]
         public string CustomerPhone { get; set; }
@@ -68,10 +68,10 @@ namespace Dime.Scheduler.CLI.Options
         public string ContactAddress { get; set; }
 
         [Option(HelpText = "The job's contact address longitude.")]
-        public decimal ContactAddressGeoLong { get; set; }
+        public decimal? ContactAddressGeoLong { get; set; }
 
         [Option(HelpText = "The job's contact address latitude.")]
-        public decimal ContactAddressGeoLat { get; set; }
+        public decimal? ContactAddressGeoLat { get; set; }
 
         [Option(HelpText = "The job's contact phone number.")]
         public string ContactPhone { get; set; }
@@ -89,10 +89,10 @@ namespace Dime.Scheduler.CLI.Options
         public string SiteAddress { get; set; }
 
         [Option(HelpText = "The job site address longitude.")]
-        public decimal SiteAddressGeoLong { get; set; }
+        public decimal? SiteAddressGeoLong { get; set; }
 
         [Option(HelpText = "The job site address latitude.")]
-        public decimal SiteAddressGeoLat { get; set; }
+        public decimal? SiteAddressGeoLat { get; set; }
 
         [Option(HelpText = "The job site phone.")]
         public string SitePhone { get; set; }
@@ -134,10 +134,10 @@ namespace Dime.Scheduler.CLI.Options
         public string SiteFromAddress { get; set; }
 
         [Option(HelpText = "The job site from address longitude.")]
-        public decimal SiteFromAddressGeoLong { get; set; }
+        public decimal? SiteFromAddressGeoLong { get; set; }
 
         [Option(HelpText = "The job site from address latitude.")]
-        public decimal SiteFromAddressGeoLat { get; set; }
+        public decimal? SiteFromAddressGeoLat { get; set; }
 
         [Option(HelpText = "The job site from phone number.")]
         public string SiteFromPhone { get; set; }
@@ -179,10 +179,10 @@ namespace Dime.Scheduler.CLI.Options
         public string BillAddress { get; set; }
 
         [Option(HelpText = "The bill address longitude.")]
-        public decimal BillAddressGeoLong { get; set; }
+        public decimal? BillAddressGeoLong { get; set; }
 
         [Option(HelpText = "The bill address latitude.")]
-        public decimal BillAddressGeoLat { get; set; }
+        public decimal? BillAddressGeoLat { get; set; }
 
         [Option(HelpText = "The bill address phone.")]
         public string BillPhone { get; set; }
