@@ -20,7 +20,7 @@ namespace Dime.Scheduler.CLI.Tests
                 SourceApp = "Hello world",
                 SourceType = "Hello world",
                 Uri = "Hello world",
-                UriType = 1,
+                UriType = Sdk.UriType.Appointment,
                 User = ""
             };
 

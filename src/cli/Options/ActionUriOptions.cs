@@ -1,4 +1,5 @@
 ﻿using CommandLine;
+using Dime.Scheduler.Sdk;
 using Dime.Scheduler.Sdk.Import;
 
 namespace Dime.Scheduler.CLI.Options
@@ -13,7 +14,7 @@ namespace Dime.Scheduler.CLI.Options
         public string SourceType { get; set; }
 
         [Option(HelpText = "The URI type.")]
-        public int UriType { get; set; }
+        public UriType UriType { get; set; }
 
         [Option(HelpText = "The URI.")]
         public string Link { get; set; }

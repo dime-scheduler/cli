@@ -19,7 +19,7 @@ namespace Dime.Scheduler.CLI.Tests
                 Password = "Hello world",
                 AppointmentGuid = System.Guid.NewGuid(),
                 AppointmentId = 1,
-                Importance = 1,
+                Importance = Importance.High,
                 Delete = true,
                 SentFromBackOffice = true
             };

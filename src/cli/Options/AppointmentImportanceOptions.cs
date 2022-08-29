@@ -7,7 +7,7 @@ namespace Dime.Scheduler.CLI.Options
     public class AppointmentImportanceOptions : AppointmentAttributeOptions, IImportConvertable
     {
         [Option(HelpText = "The appointment's priority.")]
-        public int Importance { get; set; }
+        public Importance Importance { get; set; }
 
         public IImportRequestable ToImport() => (AppointmentImportance)this;
 

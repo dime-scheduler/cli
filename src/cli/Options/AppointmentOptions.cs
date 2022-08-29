@@ -41,7 +41,7 @@ namespace Dime.Scheduler.CLI.Options
         public string Category { get; set; }
 
         [Option(HelpText = "The priority.")]
-        public int Importance { get; set; }
+        public Importance Importance { get; set; }
 
         [Option(HelpText = "Set to true to lock the appointment.")]
         public bool? Locked { get; set; }
