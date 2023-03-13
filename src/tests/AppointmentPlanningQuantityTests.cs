@@ -12,11 +12,10 @@ namespace Dime.Scheduler.CLI.Tests
             AppointmentPlanningQuantityOptions options = new()
             {
                 Append = true,
-                User = "Hello world",
                 Uri = "Hello world",
                 SourceType = "Hello world",
                 SourceApp = "Hello world",
-                Password = "Hello world",
+                Key =  "Hello world",
                 AppointmentGuid = System.Guid.NewGuid(),
                 AppointmentId = 1,
                 Quantity = 25,

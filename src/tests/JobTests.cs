@@ -87,7 +87,6 @@ namespace Dime.Scheduler.CLI.Tests
                 Name = "TEST",
                 Note = "TEST",
                 OverRuleGanttPlanning = true,
-                Password = "TEST",
                 Pin = "TEST",
                 Responsible = "TEST",
                 SentFromBackOffice = true,
@@ -128,7 +127,7 @@ namespace Dime.Scheduler.CLI.Tests
                 TimeMarker = "TEST",
                 Type = "TEST",
                 Uri = "TEST",
-                User = "TEST"
+                Key = "X-123"
             };
 
             options.AssertEqualProperties((Job)options);

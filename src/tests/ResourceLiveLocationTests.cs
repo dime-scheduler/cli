@@ -12,9 +12,8 @@ namespace Dime.Scheduler.CLI.Tests
             ResourceLiveLocationOptions options = new()
             {
                 Append = true,
-                User = "Hello world",
+                Key = "X-123",
                 Uri = "Hello world",
-                Password = "Hello world",
                 Delete = true,
                 Latitude = 35.25M,
                 Longitude = 15.15M,

@@ -11,12 +11,11 @@ namespace Dime.Scheduler.CLI.Tests
         {
             AppointmentImportanceOptions options = new()
             {
-                Append = true,
-                User = "Hello world",
+                Append = true,               
                 Uri = "Hello world",
                 SourceType = "Hello world",
                 SourceApp = "Hello world",
-                Password = "Hello world",
+                Key = "X-123",
                 AppointmentGuid = System.Guid.NewGuid(),
                 AppointmentId = 1,
                 Importance = Importance.High,

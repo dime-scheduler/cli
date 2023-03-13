@@ -1,11 +1,11 @@
 ﻿# Dime.Scheduler CLI
 
-Connect with Dime.Scheduler through the CLI.
+Connect with Dime.Scheduler through the CLI. Version 2.x.x and up targets the cloud version of Dime.Scheduler. v1.x.x will be used for on-premise instances
 
 ## Installation
 
 ```cmd
-dotnet tool install Dime.Scheduler.CLI --global --version 1.0.0
+dotnet tool install Dime.Scheduler.CLI --global --version 2.0.0-alpha.1
 ```
 
 ## Usage
@@ -16,8 +16,7 @@ The following example adds or updates a category in Dime.Scheduler:
 dimescheduler category
 -a
 -u https://mydimescheduler.io
--c myadministrator@mydimescheduler.com
--p mystrongpassword
+-k my-api-key
 -n Service order status
 -h #32a852
 ```

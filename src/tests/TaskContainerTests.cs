@@ -13,11 +13,10 @@ namespace Dime.Scheduler.CLI.Tests
             {
                 Append = true,
                 Delete = true,
-                Password = "Hello world",
+                Key =  "Hello world",
                 SourceApp = "Hello world",
                 SourceType = "Hello world",
                 Uri = "Hello world",
-                User = "Hello world",
                 TaskNo = "Hello world",
                 Name = "Hello world",
                 JobNo = "Hello world",

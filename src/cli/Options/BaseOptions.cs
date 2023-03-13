@@ -1,4 +1,5 @@
 ﻿using CommandLine;
+using Dime.Scheduler.Sdk;
 
 namespace Dime.Scheduler.CLI.Options
 {
@@ -7,10 +8,9 @@ namespace Dime.Scheduler.CLI.Options
         [Option('u', "URI", Required = true, HelpText = "The base URI of Dime.Scheduler.")]
         public string Uri { get; set; }
 
-        [Option('c', "user", Required = true, HelpText = "The Dime.Scheduler user's email address.")]
-        public string User { get; set; }
+        [Option('k', "key", Required = true, HelpText = "Your API key")]
+        public string Key { get; set; }
 
-        [Option('p', "password", Required = true, HelpText = "The Dime.Scheduler user's password.")]
-        public string Password { get; set; }
+        public static implicit operator AuthenticationOptions(BaseOptions opts) => new(opts.Uri, opts.Key);
     }
 }

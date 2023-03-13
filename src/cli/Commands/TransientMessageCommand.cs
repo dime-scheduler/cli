@@ -13,19 +13,13 @@ namespace Dime.Scheduler.CLI.Commands
             {
                 Console.WriteLine("Adding transient message");
 
-                IAuthenticator authenticator = new FormsAuthenticator(options.Uri, options.User, options.Password);
-                DimeSchedulerClient client = new(options.Uri, authenticator);
-
-                IMessageEndpoint endpoint = await client.Messages.Request();
-
-                MessageRequest message = new()
+                DimeSchedulerClient client = new(options);
+                await client.Messages.PostAsync(new()
                 {
                     Severity = options.Severity,
                     Text = options.Text,
                     User = options.To
-                };
-
-                await endpoint.PostAsync(message);
+                });
             }
             catch (Exception ex)
             {

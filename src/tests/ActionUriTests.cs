@@ -16,12 +16,10 @@ namespace Dime.Scheduler.CLI.Tests
                 Delete = true,
                 Description = "Hello world",
                 Link = "Hello world",
-                Password = "Hello world",
                 SourceApp = "Hello world",
                 SourceType = "Hello world",
                 Uri = "Hello world",
-                UriType = Sdk.UriType.Appointment,
-                User = ""
+                UriType = Sdk.UriType.Appointment
             };
 
             options.AssertEqualProperties((ActionUri)options);

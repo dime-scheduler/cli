@@ -18,12 +18,8 @@ namespace Dime.Scheduler.CLI.Commands
             {
                 Console.WriteLine(WriteIntro(options));
 
-                IAuthenticator authenticator = new FormsAuthenticator(options.Uri, options.User, options.Password);
-                DimeSchedulerClient client = new(options.Uri, authenticator);
-                IImportEndpoint importEndpoint = await client.Import.Request();
-                ImportSet result = await importEndpoint.ProcessAsync(
-                    options.ToImport(),
-                    options.Append ? TransactionType.Append : TransactionType.Delete);
+                DimeSchedulerClient client = new(options);
+                ImportSet result = await client.Import.ProcessAsync(options.ToImport(), options.Append ? TransactionType.Append : TransactionType.Delete);
 
                 Console.WriteLine(result.Success ? "Completed successfully" : "Did not complete successfully");
             }

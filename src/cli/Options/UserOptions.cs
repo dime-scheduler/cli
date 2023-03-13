@@ -9,9 +9,6 @@ namespace Dime.Scheduler.CLI.Options
         [Option(Required = true, HelpText = "The user's e-mail address.")]
         public string Email { get; set; }
 
-        [Option(Required = true, HelpText = "The user's password.")]
-        public string Key { get; set; }
-
         [Option(HelpText = "The user type.", Default = LoginType.Forms)]
         public LoginType Type { get; set; } = LoginType.Forms;
 
@@ -20,5 +17,9 @@ namespace Dime.Scheduler.CLI.Options
 
         [Option(HelpText = "The user's time zone.")]
         public string TimeZone { get; set; }
+
+        [Option(Required = true, HelpText = "The user's password.")]
+
+        public string Password { get; set; }
     }
 }

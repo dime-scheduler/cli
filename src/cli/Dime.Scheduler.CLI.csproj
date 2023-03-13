@@ -1,52 +1,52 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>net7.0</TargetFramework>
-    <PackAsTool>true</PackAsTool>
-    <ToolCommandName>dimescheduler</ToolCommandName>
-    <NeutralLanguage>en</NeutralLanguage>
-    <LangVersion>latest</LangVersion>
-  </PropertyGroup>
-  <PropertyGroup>
-    <PackageOutputPath>./nupkg</PackageOutputPath>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <IncludeSymbols>true</IncludeSymbols>
-    <PackageIconUrl>https://cdn.dimescheduler.com/dime-software/logo-shape.png</PackageIconUrl>
-    <PackageTags>Dime;Scheduler;SDK;REST;dotnet;dotnettool</PackageTags>
-    <RepositoryUrl>https://github.com/dime-scheduler/cli</RepositoryUrl>
-    <PackageProjectUrl>https://github.com/dime-scheduler/cli</PackageProjectUrl>
-  </PropertyGroup>
-  <PropertyGroup>
-    <Authors>Dime Software</Authors>
-    <Company>Dime Software</Company>
-    <Product>Dime.Scheduler</Product>
-    <AssemblyTitle>Dime.Scheduler</AssemblyTitle>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <Description>Dime.Scheduler CLI</Description>
-    <Summary>A command-line interface for Dime.Scheduler</Summary>
-    <PackageReadmeFile>README.md</PackageReadmeFile>
-  </PropertyGroup>
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>net7.0</TargetFramework>
+		<PackAsTool>true</PackAsTool>
+		<ToolCommandName>dimescheduler</ToolCommandName>
+		<NeutralLanguage>en</NeutralLanguage>
+		<LangVersion>latest</LangVersion>
+	</PropertyGroup>
+	<PropertyGroup>
+		<PackageOutputPath>./nupkg</PackageOutputPath>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<IncludeSymbols>true</IncludeSymbols>
+		<PackageIconUrl>https://cdn.dimescheduler.com/dime-software/logo-shape.png</PackageIconUrl>
+		<PackageTags>Dime;Scheduler;SDK;REST;dotnet;dotnettool</PackageTags>
+		<RepositoryUrl>https://github.com/dime-scheduler/cli</RepositoryUrl>
+		<PackageProjectUrl>https://github.com/dime-scheduler/cli</PackageProjectUrl>
+	</PropertyGroup>
+	<PropertyGroup>
+		<Authors>Dime Software</Authors>
+		<Company>Dime Software</Company>
+		<Product>Dime.Scheduler</Product>
+		<AssemblyTitle>Dime.Scheduler</AssemblyTitle>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<Description>Dime.Scheduler CLI</Description>
+		<Summary>A command-line interface for Dime.Scheduler</Summary>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+	</PropertyGroup>
 
-  <PropertyGroup>
-    <VersionPrefix>1.0.0</VersionPrefix>
-    <VersionSuffix></VersionSuffix>
-    <AssemblyVersion>1.0.0.0</AssemblyVersion>
-    <FileVersion>1.0.0.0</FileVersion>
-  </PropertyGroup>
-  <ItemGroup>
-    <PackageReference Include="CommandLineParser" Version="2.9.1" />
-    <PackageReference Include="Dime.Scheduler.Sdk" Version="1.0.0" />
-  </ItemGroup>
+	<PropertyGroup>
+		<VersionPrefix>2.0.0</VersionPrefix>
+		<VersionSuffix>alpha.1</VersionSuffix>
+		<AssemblyVersion>2.0.0.0</AssemblyVersion>
+		<FileVersion>2.0.0.0</FileVersion>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="CommandLineParser" Version="2.9.1" />
+		<PackageReference Include="Dime.Scheduler.Sdk" Version="2.0.0-alpha.1" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <None Include="README.md" Pack="true" PackagePath="">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
+	<ItemGroup>
+		<None Include="README.md" Pack="true" PackagePath="">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="nupkg\" />
-  </ItemGroup>
-  
+	<ItemGroup>
+		<Folder Include="nupkg\" />
+	</ItemGroup>
+
 </Project>
