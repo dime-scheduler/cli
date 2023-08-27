@@ -7,6 +7,9 @@ namespace Dime.Scheduler.CLI.Options
     [Verb("task", HelpText = "Add or remove a task.")]
     public class TaskOptions : BaseOptions, IImportConvertable
     {
+        [Option(HelpText = "Set to true to create a job for this task")]
+        public bool CreateJob { get; set; }
+
         [Option(Required = true, HelpText = "The source app.")]
         public string SourceApp { get; set; }
 

@@ -12,7 +12,7 @@ namespace Dime.Scheduler.CLI.Commands
     {
         protected abstract string WriteIntro(TOptions options);
 
-        public async Task ProcessAsync(TOptions options)
+        public virtual async Task ProcessAsync(TOptions options)
         {
             try
             {

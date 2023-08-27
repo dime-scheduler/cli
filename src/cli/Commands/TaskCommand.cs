@@ -1,4 +1,6 @@
-﻿using Dime.Scheduler.CLI.Options;
+﻿using System;
+using Dime.Scheduler.CLI.Options;
+using Dime.Scheduler.Sdk;
 using Dime.Scheduler.Sdk.Import;
 
 namespace Dime.Scheduler.CLI.Commands
@@ -7,6 +9,35 @@ namespace Dime.Scheduler.CLI.Commands
         ImportCommand<TaskOptions, Task>,
         ICommand<TaskOptions>
     {
+        public override async System.Threading.Tasks.Task ProcessAsync(TaskOptions options)
+        {
+            try
+            {
+                Console.WriteLine(WriteIntro(options));
+
+                DimeSchedulerClient client = new(options);
+
+                if (options.CreateJob)
+                {
+                    await client.Jobs.Create(new Job()
+                    {
+                        SourceApp = options.SourceApp,
+                        SourceType = options.SourceType,
+                        ShortDescription = options.ShortDescription,
+                        Description = options.Description,
+                        JobNo = options.JobNo
+                    });
+                }
+
+                ImportSet result = await client.Import.ProcessAsync(options.ToImport(), options.Append ? TransactionType.Append : TransactionType.Delete);
+                Console.WriteLine(result.Success ? "Completed successfully" : "Did not complete successfully");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+
         protected override string WriteIntro(TaskOptions options)
             => $"Adding task for job {options.JobNo} with number {options.TaskNo}.";
     }
