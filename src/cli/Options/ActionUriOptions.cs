@@ -6,7 +6,7 @@ namespace Dime.Scheduler.CLI.Options
 {
     [Verb("actionuri", HelpText = "Add or remove an action URI.")]
     public class ActionUriOptions : BaseOptions, IImportConvertable
-    {       
+    {
         [Option(HelpText = "The source app.")]
         public string SourceApp { get; set; }
 

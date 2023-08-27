@@ -10,10 +10,10 @@ namespace Dime.Scheduler.CLI.Tests
         public void Mapping_AppointmentCategory_TestProperties()
         {
             AppointmentCategoryOptions options = new()
-            {               
+            {
                 SourceType = "Hello world",
                 SourceApp = "Hello world",
-                Key =  "Hello world",
+                Key = "Hello world",
                 AppointmentGuid = System.Guid.NewGuid(),
                 AppointmentId = 1,
                 Category = "Hello world",

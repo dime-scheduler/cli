@@ -18,7 +18,7 @@ namespace Dime.Scheduler.CLI.Commands
                 await client.Users.Create(new()
                 {
                     Email = options.Email,
-                    Password =  options.Password,
+                    Password = options.Password,
                     Language = options.Language,
                     TimeZone = options.TimeZone,
                     Type = options.Type

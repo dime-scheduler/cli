@@ -10,8 +10,8 @@ namespace Dime.Scheduler.CLI.Tests
         public void Mapping_AppointmentContainer_TestProperties()
         {
             AppointmentContainerOptions options = new()
-            {             
-                Key =  "Hello world",
+            {
+                Key = "Hello world",
                 Container = "Hello world",
                 Appointment = "15"
             };

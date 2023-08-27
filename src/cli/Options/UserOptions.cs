@@ -19,7 +19,6 @@ namespace Dime.Scheduler.CLI.Options
         public string TimeZone { get; set; }
 
         [Option(Required = true, HelpText = "The user's password.")]
-
         public string Password { get; set; }
     }
 }

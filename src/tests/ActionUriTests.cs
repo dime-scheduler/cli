@@ -10,8 +10,8 @@ namespace Dime.Scheduler.CLI.Tests
         public void Mapping_ActionUri_TestProperties()
         {
             ActionUriOptions options = new()
-            {               
-                Default = true,              
+            {
+                Default = true,
                 Description = "Hello world",
                 Link = "Hello world",
                 SourceApp = "Hello world",
