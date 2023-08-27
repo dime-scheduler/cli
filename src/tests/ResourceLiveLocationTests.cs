@@ -11,10 +11,7 @@ namespace Dime.Scheduler.CLI.Tests
         {
             ResourceLiveLocationOptions options = new()
             {
-                Append = true,
                 Key = "X-123",
-                Uri = "Hello world",
-                Delete = true,
                 Latitude = 35.25M,
                 Longitude = 15.15M,
                 ResourceNo = "RESOURCENO"

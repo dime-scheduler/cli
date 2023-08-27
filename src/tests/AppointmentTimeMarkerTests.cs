@@ -11,15 +11,12 @@ namespace Dime.Scheduler.CLI.Tests
         {
             AppointmentTimeMarkerOptions options = new()
             {
-                Append = true,
-                Uri = "Hello world",
                 SourceType = "Hello world",
                 SourceApp = "Hello world",
                 Key =  "Hello world",
                 AppointmentGuid = System.Guid.NewGuid(),
                 AppointmentId = 1,
                 TimeMarker = "Hello world",
-                Delete = true,
                 SentFromBackOffice = true
             };
 

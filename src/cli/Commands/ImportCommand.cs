@@ -19,9 +19,15 @@ namespace Dime.Scheduler.CLI.Commands
                 Console.WriteLine(WriteIntro(options));
 
                 DimeSchedulerClient client = new(options);
-                ImportSet result = await client.Import.ProcessAsync(options.ToImport(), options.Append ? TransactionType.Append : TransactionType.Delete);
+
+                CrudAction action = options.Action.GetValueFromDescription<CrudAction>();
+                ImportSet result = await client.Import.ProcessAsync(options.ToImport(), action != CrudAction.Delete ? TransactionType.Append : TransactionType.Delete);
 
                 Console.WriteLine(result.Success ? "Completed successfully" : "Did not complete successfully");
+            }
+            catch (ArgumentException argException)
+            {
+                Console.WriteLine("Action for this type was not recognized. Supported actions: add, update, delete");
             }
             catch (Exception ex)
             {

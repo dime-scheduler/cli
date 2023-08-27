@@ -29,7 +29,8 @@ namespace Dime.Scheduler.CLI.Commands
                     });
                 }
 
-                ImportSet result = await client.Import.ProcessAsync(options.ToImport(), options.Append ? TransactionType.Append : TransactionType.Delete);
+                _ = Enum.TryParse(options.Action, out CrudAction action);
+                ImportSet result = await client.Import.ProcessAsync(options.ToImport(), action != CrudAction.Delete ? TransactionType.Append : TransactionType.Delete);
                 Console.WriteLine(result.Success ? "Completed successfully" : "Did not complete successfully");
             }
             catch (Exception ex)

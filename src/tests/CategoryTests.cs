@@ -9,10 +9,7 @@ namespace Dime.Scheduler.CLI.Tests
         {
             Options.CategoryOptions options = new()
             {
-                Append = true,
-                Uri = "Hello world",
-                Key =  "Hello world",
-                Delete = true,
+                Key = "Hello world",
                 Color = "GREEN",
                 Name = "CATEGORY"
             };

@@ -13,7 +13,6 @@ namespace Dime.Scheduler.CLI.Tests
             JobOptions options = new()
             {
                 AllowDependencies = true,
-                Append = true,
                 AvailableInGantt = true,
                 BillAddress = "ADDRESS",
                 BillAddressGeoLat = 51.055346M,
@@ -42,7 +41,6 @@ namespace Dime.Scheduler.CLI.Tests
                 CustomerNo = "TEST",
                 CustomerPhone = "TEST",
                 CustomerReference = "TEST",
-                Delete = true,
                 Description = "TEST",
                 EnableManualSelection = true,
                 EndDate = new DateTime(2021, 01, 10, 10, 30, 0),
@@ -126,7 +124,6 @@ namespace Dime.Scheduler.CLI.Tests
                 StartDate = new DateTime(2021, 1, 10, 10, 5, 0),
                 TimeMarker = "TEST",
                 Type = "TEST",
-                Uri = "TEST",
                 Key = "X-123"
             };
 

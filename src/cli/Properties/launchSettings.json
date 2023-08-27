@@ -2,7 +2,7 @@
   "profiles": {
     "Dime.Scheduler.CLI": {
       "commandName": "Project",
-      "commandLineArgs": "pin -a --env Dev -k DS-6BTLFKPD-M3ROU9EK-0AWOMKSG-ZKK6IS -h #6e64b5 -n Pin"
+      "commandLineArgs": "pin add --env Dev -k DS-6BTLFKPD-M3ROU9EK-0AWOMKSG-ZKK6IS -h #6e64b5 -n Pin"
     }
   }
 }

@@ -10,15 +10,12 @@ namespace Dime.Scheduler.CLI.Tests
         public void Mapping_ActionUri_TestProperties()
         {
             ActionUriOptions options = new()
-            {
-                Append = true,
-                Default = true,
-                Delete = true,
+            {               
+                Default = true,              
                 Description = "Hello world",
                 Link = "Hello world",
                 SourceApp = "Hello world",
                 SourceType = "Hello world",
-                Uri = "Hello world",
                 UriType = Sdk.UriType.Appointment
             };
 

@@ -10,13 +10,10 @@ namespace Dime.Scheduler.CLI.Tests
         public void Mapping_TaskContainer_TestProperties()
         {
             TaskContainerOptions options = new()
-            {
-                Append = true,
-                Delete = true,
+            {            
                 Key =  "Hello world",
                 SourceApp = "Hello world",
                 SourceType = "Hello world",
-                Uri = "Hello world",
                 TaskNo = "Hello world",
                 Name = "Hello world",
                 JobNo = "Hello world",

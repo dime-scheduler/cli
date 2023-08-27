@@ -36,14 +36,10 @@ To clone and run this application, you'll need Visual Studio 16.7 or higher. The
 The following example adds or updates a category in Dime.Scheduler:
 
 ```cmd
-dimescheduler category
--a
--u https://mydimescheduler.io
--c myadministrator@mydimescheduler.com
--p mystrongpassword
--n Service order status
--h #32a852
+dimescheduler category add -k "MYAPIKEY" -n 'Service order 123' -h #32a852
 ```
+
+To specify an environment, add `--env` followed by either `Dev`, `Test`, or `Staging`.
 
 The entry point of the global tool is the `dimescheduler` command.
 
@@ -51,7 +47,7 @@ The entry point of the global tool is the `dimescheduler` command.
 
 See the repo's [📚 wiki](https://github.com/dime-scheduler/cli/wiki) for a list of all commands and their parameters.
 
-To see the parameters of a command, simply run the `dimescheduler` + `entity` + `--help` command and you'll get all the information you need:
+To see the parameters of a command, simply run the `dimescheduler` + `verb` + `entity` + `--help` command and you'll get all the information you need:
 
 <img src="assets/cmd-command.png" />
 

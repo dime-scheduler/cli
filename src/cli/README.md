@@ -13,12 +13,7 @@ dotnet tool install Dime.Scheduler.CLI --global --version 2.0.0-alpha.1
 The following example adds or updates a category in Dime.Scheduler:
 
 ```cmd
-dimescheduler category
--a
--u https://mydimescheduler.io
--k my-api-key
--n Service order status
--h #32a852
+dimescheduler category add -k "MYAPIKEY" -n 'Service order 123' -h #32a852
 ```
 
 The entry point of the global tool is the `dimescheduler` command. See the repo's wiki for a list of all commands and their parameters.
