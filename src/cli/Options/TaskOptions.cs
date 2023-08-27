@@ -25,7 +25,7 @@ namespace Dime.Scheduler.CLI.Options
         [Option(HelpText = "The task type.")]
         public TaskType TaskType { get; set; }
 
-        [Option(Required = true, HelpText = "A short text describing the task.")]
+        [Option(HelpText = "A short text describing the task.")]
         public string ShortDescription { get; set; }
 
         [Option(HelpText = "A longer text to describe the task")]
@@ -525,7 +525,7 @@ namespace Dime.Scheduler.CLI.Options
               ServiceName = options.ServiceName,
               ServiceNo = options.ServiceNo,
               ServiceSerialNo = options.ServiceSerialNo,
-              ShortDescription = options.ShortDescription,
+              ShortDescription = !string.IsNullOrEmpty(options.ShortDescription) ? options.ShortDescription : options.Description?[0..Math.Min(options.Description.Length, 50)],
               Skill1 = options.Skill1,
               Skill2 = options.Skill2,
               Skill3 = options.Skill3,

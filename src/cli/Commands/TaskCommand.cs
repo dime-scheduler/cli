@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using Dime.Scheduler.CLI.Options;
 using Dime.Scheduler.Sdk;
 using Dime.Scheduler.Sdk.Import;
@@ -23,7 +24,7 @@ namespace Dime.Scheduler.CLI.Commands
                     {
                         SourceApp = options.SourceApp,
                         SourceType = options.SourceType,
-                        ShortDescription = options.ShortDescription,
+                        ShortDescription = !string.IsNullOrEmpty(options.ShortDescription) ? options.ShortDescription : options.Description?[0..Math.Min(options.Description.Length, 50)],
                         Description = options.Description,
                         JobNo = options.JobNo
                     });
