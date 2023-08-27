@@ -1,5 +1,4 @@
-﻿using System;
-using Dime.Scheduler.CLI.Options;
+﻿using Dime.Scheduler.CLI.Options;
 
 namespace Dime.Scheduler.CLI.Utils
 {
@@ -7,8 +6,8 @@ namespace Dime.Scheduler.CLI.Utils
     {
         internal static string GetOperationType(this BaseOptions opts)
         {
-            _ = Enum.TryParse(opts.Action, out CrudAction action);
-            return action != CrudAction.Delete ? "Appending" : "Deleting"; ;
+            CrudAction action = opts.Action.GetValueFromDescription<CrudAction>();
+            return action != CrudAction.Delete ? "Appending" : "Deleting";
         }
     }
 }

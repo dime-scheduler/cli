@@ -30,7 +30,7 @@ namespace Dime.Scheduler.CLI.Commands
                     });
                 }
 
-                _ = Enum.TryParse(options.Action, out CrudAction action);
+                CrudAction action = options.Action.GetValueFromDescription<CrudAction>();
                 ImportSet result = await client.Import.ProcessAsync(options.ToImport(), action != CrudAction.Delete ? TransactionType.Append : TransactionType.Delete);
                 Console.WriteLine(result.Success ? "Completed successfully" : "Did not complete successfully");
             }
