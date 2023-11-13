@@ -2,7 +2,7 @@
 
 	<PropertyGroup>
 		<OutputType>Exe</OutputType>
-		<TargetFramework>net7.0</TargetFramework>
+		<TargetFramework>net8.0</TargetFramework>
 		<PackAsTool>true</PackAsTool>
 		<ToolCommandName>dimescheduler</ToolCommandName>
 		<NeutralLanguage>en</NeutralLanguage>
@@ -12,7 +12,7 @@
 		<PackageOutputPath>./nupkg</PackageOutputPath>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<IncludeSymbols>true</IncludeSymbols>
-		<PackageIconUrl>https://cdn.dimescheduler.com/dime-scheduler/logo-shape.png</PackageIconUrl>
+		<PackageIconUrl>https://cdn.dimescheduler.com/dime-scheduler/v2/shape.png</PackageIconUrl>
 		<PackageTags>Dime;Scheduler;SDK;REST;dotnet;dotnettool</PackageTags>
 		<RepositoryUrl>https://github.com/dime-scheduler/cli</RepositoryUrl>
 		<PackageProjectUrl>https://github.com/dime-scheduler/cli</PackageProjectUrl>
@@ -30,13 +30,13 @@
 
 	<PropertyGroup>
 		<VersionPrefix>2.0.0</VersionPrefix>
-		<VersionSuffix>alpha.10</VersionSuffix>
+		<VersionSuffix>alpha.11</VersionSuffix>
 		<AssemblyVersion>2.0.0.0</AssemblyVersion>
 		<FileVersion>2.0.0.0</FileVersion>
 	</PropertyGroup>
 	<ItemGroup>
 		<PackageReference Include="CommandLineParser" Version="2.9.1" />
-		<PackageReference Include="Dime.Scheduler.Sdk" Version="2.0.0-alpha.7" />
+		<PackageReference Include="Dime.Scheduler.Sdk" Version="2.0.0-alpha.17" />
 	</ItemGroup>
 
 	<ItemGroup>
