@@ -13,9 +13,9 @@ namespace Dime.Scheduler.CLI.Commands
             {
                 Console.WriteLine($"Adding user with e-mail {options.Email}");
 
-                DimeSchedulerClient client = new(options);
+                DimeSchedulerClient client = new(options.Environment.GetDescription(), options.Key);
 
-                await client.Users.Create(new()
+                await client.Users.CreateAsync(new()
                 {
                     Email = options.Email,
                     Password = options.Password,

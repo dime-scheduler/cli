@@ -18,7 +18,7 @@ namespace Dime.Scheduler.CLI.Commands
             {
                 Console.WriteLine(WriteIntro(options));
 
-                DimeSchedulerClient client = new(options);
+                DimeSchedulerClient client = new(options.Environment.GetDescription(), options.Key);
 
                 CrudAction action = options.Action.GetValueFromDescription<CrudAction>();
                 ImportSet result = await client.Import.ProcessAsync(options.ToImport(), action != CrudAction.Delete ? TransactionType.Append : TransactionType.Delete);

@@ -15,11 +15,11 @@ namespace Dime.Scheduler.CLI.Commands
             {
                 Console.WriteLine(WriteIntro(options));
 
-                DimeSchedulerClient client = new(options);
+                DimeSchedulerClient client = new(options.Environment.GetDescription(), options.Key);
 
                 if (options.CreateJob)
                 {
-                    await client.Jobs.Create(new Job()
+                    await client.Jobs.CreateAsync(new Job()
                     {
                         SourceApp = options.SourceApp,
                         SourceType = options.SourceType,
