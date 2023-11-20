@@ -8,7 +8,7 @@ namespace Dime.Scheduler.CLI.Tests
         public void Mapping_Notification_TestProperties()
         {
             Options.NotificationOptions options = new();
-            options.AssertEqualProperties((Sdk.Import.Notification)options);
+            options.AssertEqualProperties((Sdk.Models.Notification)options);
         }
     }
 }

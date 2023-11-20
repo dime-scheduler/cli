@@ -14,12 +14,7 @@ namespace Dime.Scheduler.CLI.Commands
                 Console.WriteLine("Adding transient message");
 
                 DimeSchedulerClient client = new(options.Environment.GetDescription(), options.Key);
-                await client.Messages.PostAsync(new()
-                {
-                    Severity = options.Severity,
-                    Text = options.Text,
-                    User = options.To
-                });
+                await client.Messages.PostAsync(new Message(options.Text, options.To, options.Severity));
             }
             catch (Exception ex)
             {

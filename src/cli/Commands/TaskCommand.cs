@@ -1,7 +1,7 @@
 ﻿using System;
 using Dime.Scheduler.CLI.Options;
 using Dime.Scheduler.Sdk;
-using Dime.Scheduler.Sdk.Import;
+using Dime.Scheduler.Sdk.Models;
 
 namespace Dime.Scheduler.CLI.Commands
 {

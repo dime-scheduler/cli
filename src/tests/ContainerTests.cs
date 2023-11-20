@@ -8,7 +8,7 @@ namespace Dime.Scheduler.CLI.Tests
         public void Mapping_Container_TestProperties()
         {
             Options.ContainerOptions options = new();
-            options.AssertEqualProperties((Sdk.Import.Container)options);
+            options.AssertEqualProperties((Sdk.Models.Container)options);
         }
     }
 }

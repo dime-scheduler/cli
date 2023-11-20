@@ -8,7 +8,7 @@ namespace Dime.Scheduler.CLI.Tests
         public void Mapping_Caption_TestProperties()
         {
             Options.CaptionOptions options = new();
-            options.AssertEqualProperties((Sdk.Import.Caption)options);
+            options.AssertEqualProperties((Sdk.Models.Caption)options);
         }
     }
 }

@@ -1,6 +1,6 @@
 using System;
 using Dime.Scheduler.CLI.Options;
-using Dime.Scheduler.Sdk.Import;
+using Dime.Scheduler.Sdk.Models;
 using Xunit;
 
 namespace Dime.Scheduler.CLI.Tests
@@ -79,7 +79,7 @@ namespace Dime.Scheduler.CLI.Tests
                 FreeText7 = "FREE TEXT",
                 FreeText8 = "FREE TEXT",
                 FreeText9 = "FREE TEXT",
-                Importance = Sdk.Import.Importance.High,
+                Importance = Sdk.Models.Importance.High,
                 JobNo = "TEST",
                 Language = "TEST",
                 Name = "TEST",

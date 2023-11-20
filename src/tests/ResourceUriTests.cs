@@ -8,7 +8,7 @@ namespace Dime.Scheduler.CLI.Tests
         public void Mapping_ResourceUri_TestProperties()
         {
             Options.ResourceUriOptions options = new();
-            options.AssertEqualProperties((Sdk.Import.ResourceUri)options);
+            options.AssertEqualProperties((Sdk.Models.ResourceUri)options);
         }
     }
 }

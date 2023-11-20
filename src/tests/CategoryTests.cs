@@ -14,7 +14,7 @@ namespace Dime.Scheduler.CLI.Tests
                 Name = "CATEGORY"
             };
 
-            options.AssertEqualProperties((Sdk.Import.Category)options);
+            options.AssertEqualProperties((Sdk.Models.Category)options);
         }
     }
 }
