@@ -4,7 +4,7 @@ using Dime.Scheduler.Sdk.Models;
 namespace Dime.Scheduler.CLI.Commands
 {
     public class AppointmentContentCommand :
-        ImportCommand<AppointmentContentOptions, AppointmentContent>,
+        Command<AppointmentContentOptions, AppointmentContent>,
         ICommand<AppointmentContentOptions>
     {
         protected override string WriteIntro(AppointmentContentOptions options)

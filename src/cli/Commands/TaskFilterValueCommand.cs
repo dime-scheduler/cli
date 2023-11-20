@@ -4,7 +4,7 @@ using Dime.Scheduler.Sdk.Models;
 namespace Dime.Scheduler.CLI.Commands
 {
     public class TaskFilterValueCommand :
-        ImportCommand<TaskFilterValueOptions, TaskFilterValue>,
+        Command<TaskFilterValueOptions, TaskFilterValue>,
         ICommand<TaskFilterValueOptions>
     {
         protected override string WriteIntro(TaskFilterValueOptions options)

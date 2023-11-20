@@ -4,7 +4,7 @@ using Dime.Scheduler.Sdk.Models;
 namespace Dime.Scheduler.CLI.Commands
 {
     public class FilterValueCommand :
-        ImportCommand<FilterValueOptions, FilterValue>,
+        Command<FilterValueOptions, FilterValue>,
         ICommand<FilterValueOptions>
     {
         protected override string WriteIntro(FilterValueOptions options)

@@ -5,7 +5,7 @@ using Dime.Scheduler.Sdk.Models;
 namespace Dime.Scheduler.CLI.Commands
 {
     public class PinCommand :
-        ImportCommand<PinOptions, Pin>,
+        Command<PinOptions, Pin>,
         ICommand<PinOptions>
     {
         protected override string WriteIntro(PinOptions options)

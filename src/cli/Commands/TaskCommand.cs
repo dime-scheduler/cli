@@ -6,7 +6,7 @@ using Dime.Scheduler.Sdk.Models;
 namespace Dime.Scheduler.CLI.Commands
 {
     public class TaskCommand :
-        ImportCommand<TaskOptions, Task>,
+        Command<TaskOptions, Task>,
         ICommand<TaskOptions>
     {
         public override async System.Threading.Tasks.Task ProcessAsync(TaskOptions options)

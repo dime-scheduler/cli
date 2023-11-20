@@ -4,7 +4,7 @@ using Dime.Scheduler.Sdk.Models;
 namespace Dime.Scheduler.CLI.Commands
 {
     public class JobCommand :
-        ImportCommand<JobOptions, Job>,
+        Command<JobOptions, Job>,
         ICommand<JobOptions>
     {
         protected override string WriteIntro(JobOptions options)

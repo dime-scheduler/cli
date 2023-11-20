@@ -6,7 +6,7 @@ using Task = System.Threading.Tasks.Task;
 
 namespace Dime.Scheduler.CLI.Commands
 {
-    public abstract class ImportCommand<TOptions, TImportable>
+    public abstract class Command<TOptions, TImportable>
         where TOptions : BaseOptions, IImportConvertable
         where TImportable : class, IImportRequestable
     {

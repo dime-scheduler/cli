@@ -4,7 +4,7 @@ using Dime.Scheduler.Sdk.Models;
 namespace Dime.Scheduler.CLI.Commands
 {
     public class CaptionCommand :
-        ImportCommand<CaptionOptions, Caption>,
+        Command<CaptionOptions, Caption>,
         ICommand<CaptionOptions>
     {
         protected override string WriteIntro(CaptionOptions options)

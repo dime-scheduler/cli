@@ -4,7 +4,7 @@ using Dime.Scheduler.Sdk.Models;
 namespace Dime.Scheduler.CLI.Commands
 {
     public class ContainerCommand :
-        ImportCommand<ContainerOptions, Container>,
+        Command<ContainerOptions, Container>,
         ICommand<ContainerOptions>
     {
         protected override string WriteIntro(ContainerOptions options)

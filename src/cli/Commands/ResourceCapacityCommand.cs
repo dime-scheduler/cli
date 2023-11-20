@@ -4,7 +4,7 @@ using Dime.Scheduler.Sdk.Models;
 namespace Dime.Scheduler.CLI.Commands
 {
     public class ResourceCapacityCommand :
-        ImportCommand<ResourceCapacityOptions, ResourceCapacity>,
+        Command<ResourceCapacityOptions, ResourceCapacity>,
         ICommand<ResourceCapacityOptions>
     {
         protected override string WriteIntro(ResourceCapacityOptions options)

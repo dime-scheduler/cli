@@ -4,7 +4,7 @@ using Dime.Scheduler.Sdk.Models;
 namespace Dime.Scheduler.CLI.Commands
 {
     public class TaskLockedCommand :
-        ImportCommand<TaskLockedOptions, TaskLocked>,
+        Command<TaskLockedOptions, TaskLocked>,
         ICommand<TaskLockedOptions>
     {
         protected override string WriteIntro(TaskLockedOptions options)

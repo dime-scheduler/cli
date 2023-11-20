@@ -4,7 +4,7 @@ using Dime.Scheduler.Sdk.Models;
 namespace Dime.Scheduler.CLI.Commands
 {
     public class AppointmentUriCommand :
-        ImportCommand<AppointmentUriOptions, AppointmentUri>,
+        Command<AppointmentUriOptions, AppointmentUri>,
         ICommand<AppointmentUriOptions>
     {
         protected override string WriteIntro(AppointmentUriOptions options)
