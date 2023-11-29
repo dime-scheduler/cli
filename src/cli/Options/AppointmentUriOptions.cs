@@ -1,5 +1,5 @@
 using CommandLine;
-using Dime.Scheduler.Sdk.Import;
+using Dime.Scheduler.Entities;
 
 namespace Dime.Scheduler.CLI.Options
 {
@@ -19,7 +19,7 @@ namespace Dime.Scheduler.CLI.Options
             {
                 AppointmentGuid = options.AppointmentGuid,
                 AppointmentId = options.AppointmentId,
-                Uri = options.Uri,
+                Uri = options.Link,
                 SourceApp = options.SourceApp,
                 SourceType = options.SourceType,
                 Description = options.Description

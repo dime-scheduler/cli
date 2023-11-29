@@ -1,10 +1,10 @@
 ﻿using Dime.Scheduler.CLI.Options;
-using Resource = Dime.Scheduler.Sdk.Import.Resource;
+using Resource = Dime.Scheduler.Entities.Resource;
 
 namespace Dime.Scheduler.CLI.Commands
 {
     public class ResourceCommand :
-        ImportCommand<ResourceOptions, Resource>,
+        Command<ResourceOptions, Resource>,
         ICommand<ResourceOptions>
     {
         protected override string WriteIntro(ResourceOptions options) => $"Adding resource.";

@@ -1,6 +1,6 @@
 ﻿using System;
 using Dime.Scheduler.CLI.Options;
-using Dime.Scheduler.Sdk;
+using Dime.Scheduler.Entities;
 using Task = System.Threading.Tasks.Task;
 
 namespace Dime.Scheduler.CLI.Commands
@@ -13,19 +13,8 @@ namespace Dime.Scheduler.CLI.Commands
             {
                 Console.WriteLine("Adding transient message");
 
-                IAuthenticator authenticator = new FormsAuthenticator(options.Uri, options.User, options.Password);
-                DimeSchedulerClient client = new(options.Uri, authenticator);
-
-                IMessageEndpoint endpoint = await client.Messages.Request();
-
-                MessageRequest message = new()
-                {
-                    Severity = options.Severity,
-                    Text = options.Text,
-                    User = options.To
-                };
-
-                await endpoint.PostAsync(message);
+                DimeSchedulerClient client = new(options.Environment.GetDescription(), options.Key);
+                await client.Messages.PostAsync(new Message(options.Text, options.To, options.Severity));
             }
             catch (Exception ex)
             {

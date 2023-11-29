@@ -1,10 +1,10 @@
 ﻿using Dime.Scheduler.CLI.Options;
-using Dime.Scheduler.Sdk.Import;
+using Dime.Scheduler.Entities;
 
 namespace Dime.Scheduler.CLI.Commands
 {
     public class NotificationCommand :
-        ImportCommand<NotificationOptions, Notification>,
+        Command<NotificationOptions, Notification>,
       ICommand<NotificationOptions>
     {
         protected override string WriteIntro(NotificationOptions options)

@@ -1,11 +1,11 @@
 ﻿using Dime.Scheduler.CLI.Options;
 using Dime.Scheduler.CLI.Utils;
-using Dime.Scheduler.Sdk.Import;
+using Dime.Scheduler.Entities;
 
 namespace Dime.Scheduler.CLI.Commands
 {
     public class PinCommand :
-        ImportCommand<PinOptions, Pin>,
+        Command<PinOptions, Pin>,
         ICommand<PinOptions>
     {
         protected override string WriteIntro(PinOptions options)

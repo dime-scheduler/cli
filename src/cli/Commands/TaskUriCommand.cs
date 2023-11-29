@@ -1,10 +1,10 @@
 ﻿using Dime.Scheduler.CLI.Options;
-using Dime.Scheduler.Sdk.Import;
+using Dime.Scheduler.Entities;
 
 namespace Dime.Scheduler.CLI.Commands
 {
     public class TaskUriCommand :
-        ImportCommand<TaskUriOptions, TaskUri>,
+        Command<TaskUriOptions, TaskUri>,
         ICommand<TaskUriOptions>
     {
         protected override string WriteIntro(TaskUriOptions options)

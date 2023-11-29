@@ -1,5 +1,5 @@
 ﻿using Dime.Scheduler.CLI.Options;
-using Dime.Scheduler.Sdk.Import;
+using Dime.Scheduler.Entities;
 using Xunit;
 
 namespace Dime.Scheduler.CLI.Tests
@@ -11,11 +11,7 @@ namespace Dime.Scheduler.CLI.Tests
         {
             ResourceLiveLocationOptions options = new()
             {
-                Append = true,
-                User = "Hello world",
-                Uri = "Hello world",
-                Password = "Hello world",
-                Delete = true,
+                Key = "X-123",
                 Latitude = 35.25M,
                 Longitude = 15.15M,
                 ResourceNo = "RESOURCENO"

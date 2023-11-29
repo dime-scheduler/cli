@@ -1,10 +1,10 @@
 ﻿using Dime.Scheduler.CLI.Options;
-using Dime.Scheduler.Sdk.Import;
+using Dime.Scheduler.Entities;
 
 namespace Dime.Scheduler.CLI.Commands
 {
     public class LiveResourceLocationCommand :
-        ImportCommand<ResourceLiveLocationOptions, ResourceGpsTracking>,
+        Command<ResourceLiveLocationOptions, ResourceGpsTracking>,
         ICommand<ResourceLiveLocationOptions>
     {
         protected override string WriteIntro(ResourceLiveLocationOptions options)

@@ -1,10 +1,10 @@
 using Dime.Scheduler.CLI.Options;
-using Dime.Scheduler.Sdk.Import;
+using Dime.Scheduler.Entities;
 
 namespace Dime.Scheduler.CLI.Commands
 {
     public class AppointmentPlanningQuantityCommand :
-        ImportCommand<AppointmentPlanningQuantityOptions, AppointmentPlanningQuantity>,
+        Command<AppointmentPlanningQuantityOptions, AppointmentPlanningQuantity>,
         ICommand<AppointmentPlanningQuantityOptions>
     {
         protected override string WriteIntro(AppointmentPlanningQuantityOptions options)

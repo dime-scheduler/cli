@@ -1,10 +1,10 @@
 using Dime.Scheduler.CLI.Options;
-using Dime.Scheduler.Sdk.Import;
+using Dime.Scheduler.Entities;
 
 namespace Dime.Scheduler.CLI.Commands
 {
     public class ResourceCapacityCommand :
-        ImportCommand<ResourceCapacityOptions, ResourceCapacity>,
+        Command<ResourceCapacityOptions, ResourceCapacity>,
         ICommand<ResourceCapacityOptions>
     {
         protected override string WriteIntro(ResourceCapacityOptions options)

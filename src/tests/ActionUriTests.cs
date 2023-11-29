@@ -1,5 +1,5 @@
 ﻿using Dime.Scheduler.CLI.Options;
-using Dime.Scheduler.Sdk.Import;
+using Dime.Scheduler.Entities;
 using Xunit;
 
 namespace Dime.Scheduler.CLI.Tests
@@ -11,17 +11,12 @@ namespace Dime.Scheduler.CLI.Tests
         {
             ActionUriOptions options = new()
             {
-                Append = true,
                 Default = true,
-                Delete = true,
                 Description = "Hello world",
                 Link = "Hello world",
-                Password = "Hello world",
                 SourceApp = "Hello world",
                 SourceType = "Hello world",
-                Uri = "Hello world",
-                UriType = Sdk.UriType.Appointment,
-                User = ""
+                UriType = UriType.Appointment
             };
 
             options.AssertEqualProperties((ActionUri)options);

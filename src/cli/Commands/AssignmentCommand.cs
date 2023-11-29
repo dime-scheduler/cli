@@ -1,10 +1,10 @@
 ﻿using Dime.Scheduler.CLI.Options;
-using Dime.Scheduler.Sdk.Import;
+using Dime.Scheduler.Entities;
 
 namespace Dime.Scheduler.CLI.Commands
 {
     public class AssignmentCommand :
-        ImportCommand<AssignmentOptions, Assignment>,
+        Command<AssignmentOptions, Assignment>,
         ICommand<AssignmentOptions>
     {
         protected override string WriteIntro(AssignmentOptions options)

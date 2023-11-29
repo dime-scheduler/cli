@@ -1,5 +1,5 @@
 ﻿using Dime.Scheduler.CLI.Options;
-using Dime.Scheduler.Sdk.Import;
+using Dime.Scheduler.Entities;
 using Xunit;
 
 namespace Dime.Scheduler.CLI.Tests
@@ -11,12 +11,8 @@ namespace Dime.Scheduler.CLI.Tests
         {
             AppointmentContainerOptions options = new()
             {
-                Append = true,
-                User = "Hello world",
-                Uri = "Hello world",
-                Password = "Hello world",
+                Key = "Hello world",
                 Container = "Hello world",
-                Delete = true,
                 Appointment = "15"
             };
 

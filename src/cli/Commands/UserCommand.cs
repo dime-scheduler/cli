@@ -1,6 +1,5 @@
 ﻿using System;
 using Dime.Scheduler.CLI.Options;
-using Dime.Scheduler.Sdk;
 using Task = System.Threading.Tasks.Task;
 
 namespace Dime.Scheduler.CLI.Commands
@@ -13,20 +12,9 @@ namespace Dime.Scheduler.CLI.Commands
             {
                 Console.WriteLine($"Adding user with e-mail {options.Email}");
 
-                IAuthenticator authenticator = new FormsAuthenticator(options.Uri, options.User, options.Password);
-                DimeSchedulerClient client = new(options.Uri, authenticator);
+                DimeSchedulerClient client = new(options.Environment.GetDescription(), options.Key);
+                await client.Users.CreateAsync(new(options.Email, options.Type, options.Email, options.Password, options.Language, options.TimeZone));
 
-                ICrudEndpoint<UserRequest> usersEndpoint = await client.Users.Request();
-                UserRequest user = new()
-                {
-                    Email = options.Email,
-                    Password = options.Password,
-                    Language = options.Language,
-                    TimeZone = options.TimeZone,
-                    Type = options.Type
-                };
-
-                await usersEndpoint.Create(user);
                 Console.WriteLine("Finished successfully.");
             }
             catch (Exception ex)

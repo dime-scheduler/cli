@@ -1,7 +1,6 @@
 ﻿using System;
 using CommandLine;
-using Dime.Scheduler.Sdk;
-using Dime.Scheduler.Sdk.Import;
+using Dime.Scheduler.Entities;
 
 namespace Dime.Scheduler.CLI.Options
 {
@@ -38,6 +37,9 @@ namespace Dime.Scheduler.CLI.Options
         [Option(HelpText = "Optional reference to a task.")]
         public string TaskNo { get; set; }
 
+        [Option(HelpText = "Optional reference to an appointment.")]
+        public string AppointmentNo { get; set; }
+
         [Option(HelpText = "The appointment's GUID.")]
         public Guid? AppointmentGuid { get; set; }
 
@@ -60,7 +62,8 @@ namespace Dime.Scheduler.CLI.Options
               SourceType = options.SourceType,
               TaskNo = options.TaskNo,
               Text = options.Text,
-              Type = options.Type
+              Type = options.Type,
+              AppointmentNo = options.AppointmentNo
           };
     }
 }

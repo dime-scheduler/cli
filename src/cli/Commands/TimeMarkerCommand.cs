@@ -1,10 +1,10 @@
 ﻿using Dime.Scheduler.CLI.Options;
-using Dime.Scheduler.Sdk.Import;
+using Dime.Scheduler.Entities;
 
 namespace Dime.Scheduler.CLI.Commands
 {
     public class TimeMarkerCommand :
-        ImportCommand<TimeMarkerOptions, TimeMarker>,
+        Command<TimeMarkerOptions, TimeMarker>,
         ICommand<TimeMarkerOptions>
     {
         protected override string WriteIntro(TimeMarkerOptions options)

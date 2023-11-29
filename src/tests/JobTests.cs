@@ -1,6 +1,6 @@
 using System;
 using Dime.Scheduler.CLI.Options;
-using Dime.Scheduler.Sdk.Import;
+using Dime.Scheduler.Entities;
 using Xunit;
 
 namespace Dime.Scheduler.CLI.Tests
@@ -13,7 +13,6 @@ namespace Dime.Scheduler.CLI.Tests
             JobOptions options = new()
             {
                 AllowDependencies = true,
-                Append = true,
                 AvailableInGantt = true,
                 BillAddress = "ADDRESS",
                 BillAddressGeoLat = 51.055346M,
@@ -42,7 +41,6 @@ namespace Dime.Scheduler.CLI.Tests
                 CustomerNo = "TEST",
                 CustomerPhone = "TEST",
                 CustomerReference = "TEST",
-                Delete = true,
                 Description = "TEST",
                 EnableManualSelection = true,
                 EndDate = new DateTime(2021, 01, 10, 10, 30, 0),
@@ -81,13 +79,12 @@ namespace Dime.Scheduler.CLI.Tests
                 FreeText7 = "FREE TEXT",
                 FreeText8 = "FREE TEXT",
                 FreeText9 = "FREE TEXT",
-                Importance = Sdk.Import.Importance.High,
+                Importance = Importance.High,
                 JobNo = "TEST",
                 Language = "TEST",
                 Name = "TEST",
                 Note = "TEST",
                 OverRuleGanttPlanning = true,
-                Password = "TEST",
                 Pin = "TEST",
                 Responsible = "TEST",
                 SentFromBackOffice = true,
@@ -127,8 +124,7 @@ namespace Dime.Scheduler.CLI.Tests
                 StartDate = new DateTime(2021, 1, 10, 10, 5, 0),
                 TimeMarker = "TEST",
                 Type = "TEST",
-                Uri = "TEST",
-                User = "TEST"
+                Key = "X-123"
             };
 
             options.AssertEqualProperties((Job)options);

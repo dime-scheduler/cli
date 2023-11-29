@@ -1,6 +1,6 @@
 ﻿using System;
 using CommandLine;
-using Dime.Scheduler.Sdk.Import;
+using Dime.Scheduler.Entities;
 
 namespace Dime.Scheduler.CLI.Options
 {
@@ -16,7 +16,7 @@ namespace Dime.Scheduler.CLI.Options
         [Option(Required = true, HelpText = "The unique job number.")]
         public string JobNo { get; set; }
 
-        [Option(Required = true, HelpText = "A short text describing the job.")]
+        [Option(Required = false, HelpText = "A short text describing the job.")]
         public string ShortDescription { get; set; }
 
         [Option(HelpText = "A longer text to describe the job.")]
@@ -351,7 +351,7 @@ namespace Dime.Scheduler.CLI.Options
               SourceApp = options.SourceApp,
               SourceType = options.SourceType,
               JobNo = options.JobNo,
-              ShortDescription = options.ShortDescription,
+              ShortDescription = !string.IsNullOrEmpty(options.ShortDescription) ? options.ShortDescription : options.Description?[0..Math.Min(options.Description.Length, 50)],
               Description = options.Description,
               AllowDependencies = options.AllowDependencies,
               AvailableInGantt = options.AvailableInGantt,

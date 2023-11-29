@@ -8,7 +8,7 @@ namespace Dime.Scheduler.CLI.Tests
         public void Mapping_Resource_TestProperties()
         {
             Options.ResourceOptions options = new();
-            options.AssertEqualProperties((Sdk.Import.Resource)options);
+            options.AssertEqualProperties((Entities.Resource)options);
         }
     }
 }

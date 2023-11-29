@@ -1,5 +1,5 @@
 ﻿using Dime.Scheduler.CLI.Options;
-using Dime.Scheduler.Sdk.Import;
+using Dime.Scheduler.Entities;
 using Xunit;
 
 namespace Dime.Scheduler.CLI.Tests
@@ -11,16 +11,12 @@ namespace Dime.Scheduler.CLI.Tests
         {
             AppointmentImportanceOptions options = new()
             {
-                Append = true,
-                User = "Hello world",
-                Uri = "Hello world",
                 SourceType = "Hello world",
                 SourceApp = "Hello world",
-                Password = "Hello world",
+                Key = "X-123",
                 AppointmentGuid = System.Guid.NewGuid(),
                 AppointmentId = 1,
                 Importance = Importance.High,
-                Delete = true,
                 SentFromBackOffice = true
             };
 

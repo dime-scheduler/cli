@@ -9,16 +9,12 @@ namespace Dime.Scheduler.CLI.Tests
         {
             Options.CategoryOptions options = new()
             {
-                Append = true,
-                User = "Hello world",
-                Uri = "Hello world",
-                Password = "Hello world",
-                Delete = true,
+                Key = "Hello world",
                 Color = "GREEN",
                 Name = "CATEGORY"
             };
 
-            options.AssertEqualProperties((Sdk.Import.Category)options);
+            options.AssertEqualProperties((Entities.Category)options);
         }
     }
 }
