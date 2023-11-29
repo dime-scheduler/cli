@@ -1,5 +1,4 @@
 ﻿using CommandLine;
-using Dime.Scheduler.Sdk;
 
 namespace Dime.Scheduler.CLI.Options
 {
@@ -14,6 +13,6 @@ namespace Dime.Scheduler.CLI.Options
         [Option("env")]
         public Environment Environment { get; set; } = Environment.Production;
 
-        public static implicit operator AuthenticationOptions(BaseOptions opts) => new(opts.Environment.GetDescription(), opts.Key);
+        public static implicit operator EndpointOptions(BaseOptions opts) => new(opts.Environment.GetDescription(), opts.Key);
     }
 }

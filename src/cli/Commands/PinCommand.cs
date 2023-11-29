@@ -1,6 +1,6 @@
 ﻿using Dime.Scheduler.CLI.Options;
 using Dime.Scheduler.CLI.Utils;
-using Dime.Scheduler.Sdk.Models;
+using Dime.Scheduler.Entities;
 
 namespace Dime.Scheduler.CLI.Commands
 {

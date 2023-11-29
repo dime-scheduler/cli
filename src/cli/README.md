@@ -5,7 +5,7 @@ Connect with Dime.Scheduler through the CLI. Version 2.x.x and up targets the cl
 ## Installation
 
 ```cmd
-dotnet tool install Dime.Scheduler.CLI --global --version 2.0.0-alpha.1
+dotnet tool install Dime.Scheduler.CLI --global --version 2.x.x
 ```
 
 ## Usage

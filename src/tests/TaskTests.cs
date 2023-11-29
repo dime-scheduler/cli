@@ -8,7 +8,7 @@ namespace Dime.Scheduler.CLI.Tests
         public void Mapping_Task_TestProperties()
         {
             Options.TaskOptions options = new();
-            options.AssertEqualProperties((Sdk.Models.Task)options);
+            options.AssertEqualProperties((Entities.Task)options);
         }
     }
 }
