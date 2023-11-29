@@ -1,6 +1,5 @@
 ﻿using System;
 using Dime.Scheduler.CLI.Options;
-using Dime.Scheduler;
 using Task = System.Threading.Tasks.Task;
 
 namespace Dime.Scheduler.CLI.Commands

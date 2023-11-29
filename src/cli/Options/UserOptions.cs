@@ -1,5 +1,4 @@
 ﻿using CommandLine;
-using Dime.Scheduler;
 
 namespace Dime.Scheduler.CLI.Options
 {
