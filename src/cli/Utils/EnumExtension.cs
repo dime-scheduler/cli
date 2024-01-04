@@ -10,12 +10,12 @@ namespace Dime.Scheduler.CLI.Options
             if (!typeof(T).IsEnum)
                 return null;
 
-            var description = enumValue.ToString();
-            var fieldInfo = enumValue.GetType().GetField(enumValue.ToString());
+            string description = enumValue.ToString();
+            System.Reflection.FieldInfo fieldInfo = enumValue.GetType().GetField(enumValue.ToString());
 
             if (fieldInfo != null)
             {
-                var attrs = fieldInfo.GetCustomAttributes(typeof(DescriptionAttribute), true);
+                object[] attrs = fieldInfo.GetCustomAttributes(typeof(DescriptionAttribute), true);
                 if (attrs != null && attrs.Length > 0)
                 {
                     description = ((DescriptionAttribute)attrs[0]).Description;
@@ -27,7 +27,7 @@ namespace Dime.Scheduler.CLI.Options
 
         internal static T GetValueFromDescription<T>(this string description) where T : Enum
         {
-            foreach (var field in typeof(T).GetFields())
+            foreach (System.Reflection.FieldInfo field in typeof(T).GetFields())
             {
                 if (Attribute.GetCustomAttribute(field,
                 typeof(DescriptionAttribute)) is DescriptionAttribute attribute)
