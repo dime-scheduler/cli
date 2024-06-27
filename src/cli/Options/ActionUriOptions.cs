@@ -24,6 +24,9 @@ namespace Dime.Scheduler.CLI.Options
         [Option(HelpText = "Flag to indicate whether this is the default action URI.")]
         public bool Default { get; set; }
 
+        [Option(HelpText = "The request type: HTTP POST or GET (with placeholder variables)")]
+        public HttpRequestType RequestType { get; set; }
+
         public IImportRequestable ToImport() => (ActionUri)this;
 
         public static implicit operator ActionUri(ActionUriOptions options)
@@ -34,7 +37,8 @@ namespace Dime.Scheduler.CLI.Options
                SourceApp = options.SourceApp,
                SourceType = options.SourceType,
                Uri = options.Link,
-               UriType = options.UriType
+               UriType = options.UriType,
+               RequestType = options.RequestType
            };
     }
 }
